@@ -7,7 +7,7 @@
     <SolutionConfiguration>Debug|Win32</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>1f92c8d9-0942-4f29-a16b-290bf7c81163</PackageIdentityName>
-    <IntermediateOutputPath>c:\Users\garicchi\documents\visual studio 2013\Projects\DxGame\DxGameWin\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Debug\</IntermediateOutputPath>
     <RegisteredManifestChecksum>6F8C0B9F767FF4D411D8E738EAD89DFD9DAA7A841B5D0646E2C090D3B59E7586</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>1f92c8d9-0942-4f29-a16b-290bf7c81163_1.0.0.0_x86__cgsr1g5s598d8</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>1f92c8d9-0942-4f29-a16b-290bf7c81163_cgsr1g5s598d8!App</RegisteredUserModeAppID>
@@ -17,44 +17,44 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="c:\Users\garicchi\documents\visual studio 2013\Projects\DxGame\Debug\DxGameWin\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-03T11:24:38.166</Modified>
+      <Modified>2014-12-03T12:22:16.948</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="c:\Users\garicchi\documents\visual studio 2013\Projects\DxGame\Debug\DxGameWin\DxGameWin.exe">
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\DxGameWin.exe">
       <PackagePath>DxGameWin.exe</PackagePath>
-      <Modified>2014-12-03T11:25:07.102</Modified>
+      <Modified>2014-12-03T12:22:15.990</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\Users\garicchi\documents\visual studio 2013\Projects\DxGame\Debug\DxGameWin\DxGameWin.winmd">
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\DxGameWin.winmd">
       <PackagePath>DxGameWin.winmd</PackagePath>
       <Modified>2014-12-03T11:24:37.417</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\Users\garicchi\documents\visual studio 2013\Projects\DxGame\DxGameWin\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-30T23:01:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\Users\garicchi\documents\visual studio 2013\Projects\DxGame\DxGameWin\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-30T23:01:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\Users\garicchi\documents\visual studio 2013\Projects\DxGame\DxGameWin\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-30T23:01:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\Users\garicchi\documents\visual studio 2013\Projects\DxGame\DxGameWin\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-30T23:01:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="c:\Users\garicchi\documents\visual studio 2013\Projects\DxGame\Debug\DxGameWin\resources.pri">
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-03T11:24:38.080</Modified>
+      <Modified>2014-12-03T12:22:16.709</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

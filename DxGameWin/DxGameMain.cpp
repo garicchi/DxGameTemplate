@@ -18,6 +18,10 @@ m_deviceResources(deviceResources)
 	// デバイスが失われたときや再作成されたときに通知を受けるように登録します
 	m_deviceResources->RegisterDeviceNotify(this);
 
+	//ゲーム画面を横に固定する場合
+	//m_deviceResources->SetCurrentOrientation(Windows::Graphics::Display::DisplayOrientations::Landscape);
+
+
 	// TODO: これをアプリのコンテンツの初期化で置き換えます。
 
 	// TODO: 既定の可変タイムステップ モード以外のモードが必要な場合は、タイマー設定を変更してください。

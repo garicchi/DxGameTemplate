@@ -68,6 +68,7 @@ void App::SetWindow(CoreWindow^ window)
 	window->PointerReleased += ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &App::OnPointerReleased);
 
 	window->PointerMoved += ref new TypedEventHandler<CoreWindow^, PointerEventArgs^>(this, &App::OnPointerMoved);
+
 #if !(WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP)
 	window->KeyDown += ref new TypedEventHandler<CoreWindow^, KeyEventArgs^>(this, &App::OnKeyDown);
 
@@ -78,10 +79,10 @@ void App::SetWindow(CoreWindow^ window)
 
 	DisplayInformation::DisplayContentsInvalidated +=
 		ref new TypedEventHandler<DisplayInformation^, Object^>(this, &App::OnDisplayContentsInvalidated);
-
-#if !(WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP)
 	window->SizeChanged +=
 		ref new TypedEventHandler<CoreWindow^, WindowSizeChangedEventArgs^>(this, &App::OnWindowSizeChanged);
+
+#if !(WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP)
 
 	currentDisplayInformation->DpiChanged +=
 		ref new TypedEventHandler<DisplayInformation^, Object^>(this, &App::OnDpiChanged);
@@ -185,13 +186,12 @@ void App::OnWindowClosed(CoreWindow^ sender, CoreWindowEventArgs^ args)
 	m_windowClosed = true;
 }
 
-#if !(WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP)
+
 void App::OnWindowSizeChanged(CoreWindow^ sender, WindowSizeChangedEventArgs^ args)
 {
 	m_deviceResources->SetLogicalSize(Size(sender->Bounds.Width, sender->Bounds.Height));
 	m_main->CreateWindowSizeDependentResources();
 }
-#endif
 
 // DisplayInformation イベント ハンドラー。
 

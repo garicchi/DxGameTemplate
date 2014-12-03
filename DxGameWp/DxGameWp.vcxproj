@@ -131,6 +131,8 @@
   </ItemDefinitionGroup>
   <PropertyGroup Label="UserMacros">
     <NuGetPackageImportStamp>c8f4c7f1</NuGetPackageImportStamp>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>x86|arm</AppxBundlePlatforms>
   </PropertyGroup>
   <ItemGroup>
     <Image Include="Assets\Logo.scale-240.png" />
