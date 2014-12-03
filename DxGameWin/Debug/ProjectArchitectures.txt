@@ -1,0 +1,1 @@
+c:\Users\garicchi\documents\visual studio 2013\Projects\DxGame\DxGameWin\DxGameWin.vcxproj;x86
