@@ -1,0 +1,32 @@
+#pragma once
+
+#include "Common/DeviceResources.h"
+#include "Common/StepTimer.h"
+#include "ToolkitHelper\GameInput.h"
+#include "ToolkitHelper/GameObject.h"
+
+#include"SpriteFont.h"
+using namespace std;
+using namespace DX;
+using namespace ToolkitHelper;
+using namespace DirectX;
+using namespace Platform;
+
+class SpriteFontRenderer :public GameObject{
+public:
+	SpriteFontRenderer(const shared_ptr<DeviceResources>& deviceResources,String^ fontPath,XMFLOAT2 position,String^ text);
+
+	void CreateResources();
+	void ReleaseResources();
+	void Update(StepTimer const& timer,const GameInput& input);
+	void Render();
+
+
+	XMFLOAT2 m_position;
+	String^ m_text;
+protected:
+	shared_ptr<SpriteFont> m_spriteFont;
+	shared_ptr<SpriteBatch> m_spriteBatch;
+	String^ m_path;
+
+};

@@ -20,17 +20,17 @@
     <AppXManifest Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-03T12:22:16.948</Modified>
+      <Modified>2014-12-04T16:19:36.473</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\DxGameWin.exe">
       <PackagePath>DxGameWin.exe</PackagePath>
-      <Modified>2014-12-03T12:22:15.990</Modified>
+      <Modified>2014-12-04T17:16:53.390</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\DxGameWin.winmd">
       <PackagePath>DxGameWin.winmd</PackagePath>
-      <Modified>2014-12-03T11:24:37.417</Modified>
+      <Modified>2014-12-04T16:19:35.047</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
@@ -42,6 +42,10 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-30T23:01:28.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\star.png">
+      <PackagePath>Assets\star.png</PackagePath>
+      <Modified>2014-12-04T15:00:59.309</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -52,9 +56,13 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-30T23:01:28.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\hoge.wav">
+      <PackagePath>Assets\hoge.wav</PackagePath>
+      <Modified>2014-12-04T14:43:45.527</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-03T12:22:16.709</Modified>
+      <Modified>2014-12-04T16:19:36.250</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

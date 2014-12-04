@@ -2,13 +2,14 @@
 
 #include "Common/DeviceResources.h"
 #include "Common/StepTimer.h"
-#include "DXTKHelper\GameInput.h"
-#include "DXTKHelper/ScreenBase.h"
-#include "Renderer/TextureRenderer.h"
+#include "ToolkitHelper\GameInput.h"
+#include "ToolkitHelper/ScreenBase.h"
+#include "Content/TextureRenderer.h"
+#include "Content\SoundObject.h"
 
 using namespace std;
 using namespace DX;
-using namespace DXTKHelper;
+using namespace ToolkitHelper;
 
 class TitleScreen:public ScreenBase{
 public:

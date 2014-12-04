@@ -1,15 +1,16 @@
 ﻿#include "pch.h"
 #include "DxGameMain.h"
 #include "Common/DirectXHelper.h"
-#include "DXTKHelper/ScreenBase.h"
+#include "ToolkitHelper/ScreenBase.h"
 #include "Screen/TitleScreen.h"
-#include "DXTKHelper\GameInput.h"
+#include "ToolkitHelper\GameInput.h"
+#include "Screen\GameScreen.h"
 
 using namespace DxGame;
 using namespace Windows::Foundation;
 using namespace Windows::System::Threading;
 using namespace Concurrency;
-using namespace DXTKHelper;
+using namespace ToolkitHelper;
 
 // アプリケーションの読み込み時にアプリケーション資産を読み込んで初期化します。
 DxGameMain::DxGameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) :
@@ -19,7 +20,7 @@ m_deviceResources(deviceResources)
 	m_deviceResources->RegisterDeviceNotify(this);
 
 	//ゲーム画面を横に固定する場合
-	//m_deviceResources->SetCurrentOrientation(Windows::Graphics::Display::DisplayOrientations::Landscape);
+	m_deviceResources->SetCurrentOrientation(Windows::Graphics::Display::DisplayOrientations::Landscape);
 
 
 	// TODO: これをアプリのコンテンツの初期化で置き換えます。

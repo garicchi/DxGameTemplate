@@ -1,25 +1,26 @@
 ﻿#include "pch.h"
 #include "DxGameMain.h"
 #include "Common/DirectXHelper.h"
-#include "DXTKHelper/ScreenBase.h"
+#include "ToolkitHelper/ScreenBase.h"
 #include "Screen/TitleScreen.h"
-#include "DXTKHelper\GameInput.h"
+#include "ToolkitHelper\GameInput.h"
+#include "Screen\GameScreen.h"
 
 using namespace DxGame;
 using namespace Windows::Foundation;
 using namespace Windows::System::Threading;
 using namespace Concurrency;
-using namespace DXTKHelper;
+using namespace ToolkitHelper;
 
 // アプリケーションの読み込み時にアプリケーション資産を読み込んで初期化します。
 DxGameMain::DxGameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) :
-	m_deviceResources(deviceResources)
+m_deviceResources(deviceResources)
 {
 	// デバイスが失われたときや再作成されたときに通知を受けるように登録します
 	m_deviceResources->RegisterDeviceNotify(this);
-	
+
 	//ゲーム画面を横に固定する場合
-	//m_deviceResources->SetCurrentOrientation(Windows::Graphics::Display::DisplayOrientations::Landscape);
+	m_deviceResources->SetCurrentOrientation(Windows::Graphics::Display::DisplayOrientations::Landscape);
 
 
 	// TODO: これをアプリのコンテンツの初期化で置き換えます。
@@ -41,14 +42,14 @@ DxGameMain::~DxGameMain()
 }
 
 // ウィンドウのサイズが変更される (デバイスの方向が変更されるなど) 場合に、 アプリケーションの状態を更新します。
-void DxGameMain::CreateWindowSizeDependentResources() 
+void DxGameMain::CreateWindowSizeDependentResources()
 {
 	// TODO: これをアプリのコンテンツのサイズに依存する初期化で置き換えます。
 	m_screenManager->CreateResources();
 }
 
 // アプリケーション状態をフレームごとに 1 回更新します。
-void DxGameMain::Update() 
+void DxGameMain::Update()
 {
 	// シーン オブジェクトを更新します。
 	m_timer.Tick([&]()
@@ -85,7 +86,7 @@ void DxGameMain::Update()
 
 // 現在のアプリケーション状態に応じて現在のフレームをレンダリングします。
 // フレームがレンダリングされ、表示準備が完了すると、true を返します。
-bool DxGameMain::Render() 
+bool DxGameMain::Render()
 {
 	// 初回更新前にレンダリングは行わないようにしてください。
 	if (m_timer.GetFrameCount() == 0)

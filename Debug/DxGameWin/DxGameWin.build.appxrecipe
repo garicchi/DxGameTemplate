@@ -30,6 +30,9 @@
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\star.png">
+      <PackagePath>Assets\star.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -37,6 +40,9 @@
     <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\hoge.wav">
+      <PackagePath>Assets\hoge.wav</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\resources.pri">
       <PackagePath>resources.pri</PackagePath>

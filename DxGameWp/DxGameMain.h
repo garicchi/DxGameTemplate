@@ -2,11 +2,11 @@
 
 #include "Common\StepTimer.h"
 #include "Common\DeviceResources.h"
-#include "DXTKHelper/ScreenManager.h"
+#include "ToolkitHelper/ScreenManager.h"
 
 using namespace std;
 using namespace DX;
-using namespace DXTKHelper;
+using namespace ToolkitHelper;
 
 // Direct2D および 3D コンテンツを画面上でレンダリングします。
 namespace DxGame

@@ -2,12 +2,12 @@
 
 #include "Common/DeviceResources.h"
 #include "Common/StepTimer.h"
-#include "DXTKHelper/ScreenBase.h"
-#include "DXTKHelper\GameInput.h"
+#include "ToolkitHelper/ScreenBase.h"
+#include "ToolkitHelper\GameInput.h"
 
 using namespace std;
 using namespace DX;
-using namespace DXTKHelper;
+using namespace ToolkitHelper;
 
 class GameScreen :public ScreenBase{
 public:

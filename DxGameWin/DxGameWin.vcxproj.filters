@@ -39,30 +39,32 @@
   <ItemGroup>
     <ClCompile Include="App.cpp" />
     <ClCompile Include="pch.cpp" />
-    <ClCompile Include="DXTKHelper\GameInput.cpp" />
-    <ClCompile Include="DXTKHelper\ScreenBase.cpp" />
-    <ClCompile Include="DXTKHelper\ScreenManager.cpp" />
-    <ClCompile Include="Renderer\FontRenderer.cpp" />
-    <ClCompile Include="Renderer\SimpleRenderer.cpp" />
     <ClCompile Include="Screen\GameScreen.cpp" />
-    <ClCompile Include="Screen\SoundScreen.cpp" />
     <ClCompile Include="Screen\TitleScreen.cpp" />
     <ClCompile Include="DxGameMain.cpp" />
+    <ClCompile Include="Content\SimpleRenderer.cpp" />
+    <ClCompile Include="Content\SoundObject.cpp" />
+    <ClCompile Include="ToolkitHelper\GameInput.cpp" />
+    <ClCompile Include="ToolkitHelper\ScreenBase.cpp" />
+    <ClCompile Include="ToolkitHelper\ScreenManager.cpp" />
+    <ClCompile Include="Content\SpriteFontRenderer.cpp" />
+    <ClCompile Include="Content\TextRenderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="DXTKHelper\GameInput.h" />
-    <ClInclude Include="DXTKHelper\RendererBase.h" />
-    <ClInclude Include="DXTKHelper\ScreenBase.h" />
-    <ClInclude Include="DXTKHelper\ScreenManager.h" />
-    <ClInclude Include="Renderer\FontRenderer.h" />
-    <ClInclude Include="Renderer\SimpleRenderer.h" />
-    <ClInclude Include="Renderer\TextureRenderer.h" />
     <ClInclude Include="Screen\GameScreen.h" />
-    <ClInclude Include="Screen\SoundScreen.h" />
     <ClInclude Include="Screen\TitleScreen.h" />
     <ClInclude Include="DxGameMain.h" />
+    <ClInclude Include="Content\SimpleRenderer.h" />
+    <ClInclude Include="Content\TextureRenderer.h" />
+    <ClInclude Include="Content\SoundObject.h" />
+    <ClInclude Include="ToolkitHelper\GameInput.h" />
+    <ClInclude Include="ToolkitHelper\GameObject.h" />
+    <ClInclude Include="ToolkitHelper\ScreenBase.h" />
+    <ClInclude Include="ToolkitHelper\ScreenManager.h" />
+    <ClInclude Include="Content\SpriteFontRenderer.h" />
+    <ClInclude Include="Content\TextRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
@@ -70,5 +72,13 @@
   <ItemGroup>
     <None Include="DxGameWin_TemporaryKey.pfx" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\hoge.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\star.png">
+      <Filter>Assets</Filter>
+    </Image>
   </ItemGroup>
 </Project>

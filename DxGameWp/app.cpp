@@ -83,7 +83,7 @@ void App::SetWindow(CoreWindow^ window)
 		ref new TypedEventHandler<CoreWindow^, WindowSizeChangedEventArgs^>(this, &App::OnWindowSizeChanged);
 
 #if !(WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP)
-	
+
 	currentDisplayInformation->DpiChanged +=
 		ref new TypedEventHandler<DisplayInformation^, Object^>(this, &App::OnDpiChanged);
 

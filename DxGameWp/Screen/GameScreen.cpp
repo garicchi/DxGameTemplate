@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "GameScreen.h"
 
-#include "Renderer/TextureRenderer.h"
-#include "Renderer\FontRenderer.h"
+#include "Content/TextureRenderer.h"
+#include "Content\TextRenderer.h"
 
 using namespace std;
 using namespace DX;
@@ -14,8 +14,7 @@ GameScreen::GameScreen(const shared_ptr<DeviceResources>& deviceResources)
 void GameScreen::CreateResources(){
 	ScreenBase::CreateResources();
 
-	//AddObject(shared_ptr<TextureRenderer>(new TextureRenderer(m_deviceResources, L"assets\\SmallLogo.png")));
-	AddObject(shared_ptr<FontRenderer>(new FontRenderer(m_deviceResources)));
+	AddObject(shared_ptr<TextRenderer>(new TextRenderer(m_deviceResources,"Ç‡ÇÒÇ∂Ç·èƒÇ´","Segoe UI",XMFLOAT2(10,10),ColorF::White,34.0f)));
 }
 
 void GameScreen::ReleaseResources(){
