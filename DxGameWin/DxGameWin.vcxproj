@@ -97,7 +97,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <PackageCertificateKeyFile>DxGameWin_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <NuGetPackageImportStamp>d9e2a643</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>c6982453</NuGetPackageImportStamp>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <Link>
@@ -187,6 +187,7 @@
     <Image Include="Assets\Logo.png" />
     <Image Include="Assets\SmallLogo.png" />
     <Image Include="Assets\star.png" />
+    <Image Include="Assets\star2.png" />
     <Image Include="Assets\StoreLogo.png" />
     <Image Include="Assets\SplashScreen.png" />
   </ItemGroup>

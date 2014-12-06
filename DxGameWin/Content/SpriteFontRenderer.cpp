@@ -5,7 +5,7 @@ using namespace std;
 using namespace DX;
 
 //レンダラーの初期化処理を行う
-SpriteFontRenderer::SpriteFontRenderer(const shared_ptr<DeviceResources>& deviceResources,String^ fontPath,XMFLOAT2 position,String^ text)
+SpriteFontRenderer::SpriteFontRenderer(const shared_ptr<DeviceResources>& deviceResources, String^ fontPath, D2D1_VECTOR_2F position, String^ text)
 	:GameObject(deviceResources),m_path(fontPath),m_position(position){
 
 }
@@ -33,6 +33,6 @@ void SpriteFontRenderer::Update(StepTimer const &timer, const GameInput& input){
 //レンダラーの描画処理を行う
 void SpriteFontRenderer::Render(){
 	m_spriteBatch->Begin();
-	m_spriteFont->DrawString(m_spriteBatch.get(),m_text->Data(),m_position);
+	m_spriteFont->DrawString(m_spriteBatch.get(),m_text->Data(),XMFLOAT2(m_position.x,m_position.y));
 	m_spriteBatch->End();
 }

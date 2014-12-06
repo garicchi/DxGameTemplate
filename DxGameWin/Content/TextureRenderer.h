@@ -44,12 +44,12 @@ public:
 		m_sprite->Begin();
 
 		RECT rect;
-		rect.top = m_position.y ;
-		rect.left = m_position.x ;
-		rect.bottom = m_position.y + m_size.y;
-		rect.right = m_position.x + m_size.x;
+		rect.top = static_cast<int>(m_position.y);
+		rect.left = static_cast<int>(m_position.x);
+		rect.bottom = static_cast<int>(m_position.y + m_size.y);
+		rect.right = static_cast<int>(m_position.x + m_size.x);
 
-		m_sprite->Draw(m_texture.Get(), rect, nullptr, Colors::White, m_rotation, XMFLOAT2(m_size.x/2.0, m_size.y/2.0));
+		m_sprite->Draw(m_texture.Get(), rect, nullptr, Colors::White, m_rotation, XMFLOAT2(0,0));
 		m_sprite->End();
 	}
 

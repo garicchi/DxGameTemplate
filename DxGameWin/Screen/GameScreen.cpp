@@ -6,6 +6,7 @@
 
 using namespace std;
 using namespace DX;
+using namespace D2D1;
 
 GameScreen::GameScreen(const shared_ptr<DeviceResources>& deviceResources)
 	:ScreenBase(deviceResources){
@@ -14,7 +15,7 @@ GameScreen::GameScreen(const shared_ptr<DeviceResources>& deviceResources)
 void GameScreen::CreateResources(){
 	ScreenBase::CreateResources();
 
-	AddObject(shared_ptr<TextRenderer>(new TextRenderer(m_deviceResources,"‚à‚ñ‚¶‚áÄ‚«","Segoe UI",XMFLOAT2(10,10),ColorF::White,34.0f)));
+	AddObject(shared_ptr<TextRenderer>(new TextRenderer(m_deviceResources,"‚à‚ñ‚¶‚áÄ‚«","Segoe UI",Point2F(10,10),ColorF::White,34.0f)));
 }
 
 void GameScreen::ReleaseResources(){

@@ -89,9 +89,9 @@
     <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Media Include="Assets\hoge.wav" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Assets\hoge.wav" />
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

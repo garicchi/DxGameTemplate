@@ -132,7 +132,7 @@
     </Link>
   </ItemDefinitionGroup>
   <PropertyGroup Label="UserMacros">
-    <NuGetPackageImportStamp>c8f4c7f1</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>97636d83</NuGetPackageImportStamp>
     <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>x86|arm</AppxBundlePlatforms>
   </PropertyGroup>
@@ -151,10 +151,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Media Include="Assets\hoge.wav" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Assets\hoge.wav" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

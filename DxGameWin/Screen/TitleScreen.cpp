@@ -9,7 +9,7 @@ using namespace D2D1;
 TitleScreen::TitleScreen(const shared_ptr<DeviceResources>& deviceResources)
 	:ScreenBase(deviceResources){
 	
-	texture1 =make_shared<TextureRenderer>(TextureRenderer(m_deviceResources, "assets/star.png",Vector2F(500,300),Vector2F(100,100),0.0f));
+	texture1 =make_shared<TextureRenderer>(TextureRenderer(m_deviceResources, "assets/star2.png",Vector2F(500,300),Vector2F(100,100),0.0f));
 }
 
 void TitleScreen::CreateResources(){

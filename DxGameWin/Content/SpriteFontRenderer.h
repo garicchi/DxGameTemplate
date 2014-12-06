@@ -14,7 +14,7 @@ using namespace Platform;
 
 class SpriteFontRenderer :public GameObject{
 public:
-	SpriteFontRenderer(const shared_ptr<DeviceResources>& deviceResources,String^ fontPath,XMFLOAT2 position,String^ text);
+	SpriteFontRenderer(const shared_ptr<DeviceResources>& deviceResources, String^ fontPath, D2D1_VECTOR_2F position, String^ text);
 
 	void CreateResources();
 	void ReleaseResources();
@@ -22,7 +22,7 @@ public:
 	void Render();
 
 
-	XMFLOAT2 m_position;
+	D2D1_VECTOR_2F m_position;
 	String^ m_text;
 protected:
 	shared_ptr<SpriteFont> m_spriteFont;

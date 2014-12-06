@@ -33,6 +33,9 @@
     <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\star.png">
       <PackagePath>Assets\star.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\star2.png">
+      <PackagePath>Assets\star2.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
