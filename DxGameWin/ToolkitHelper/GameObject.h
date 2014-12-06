@@ -15,7 +15,7 @@ namespace ToolkitHelper{
 		}
 		virtual void CreateResources() = 0;
 		virtual void ReleaseResources() = 0;
-		virtual void Update(StepTimer const& timer,const GameInput& input) = 0;
+		virtual void Update(const StepTimer& timer,const GameInput& input) = 0;
 		virtual void Render() = 0;
 
 	protected:

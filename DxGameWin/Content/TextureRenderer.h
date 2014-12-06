@@ -36,7 +36,7 @@ public:
 		m_texture.Reset();
 	}
 
-	void Update(DX::StepTimer const& timer, const GameInput& input){
+	void Update(const StepTimer& timer, const GameInput& input){
 		
 	}
 

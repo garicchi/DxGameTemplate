@@ -18,7 +18,7 @@ public:
 
 	void CreateResources();
 	void ReleaseResources();
-	void Update(StepTimer const& timer,const GameInput& input);
+	void Update(const StepTimer& timer,const GameInput& input);
 	void Render();
 
 
