@@ -203,10 +203,7 @@ void DX::DeviceResources::CreateDeviceResources()
 // これらのリソースは、ウィンドウ サイズが変更されるたびに再作成する必要があります。
 void DX::DeviceResources::CreateWindowSizeDependentResources() 
 {
-#if (WINAPI_FAMILY == WINAPI_FAMILY_PHONE_APP)
-	// Windows Phone はスワップ チェーンのサイズ変更をサポートしていないため、サイズ変更の代わりにクリアしてください。
-	m_swapChain = nullptr;
-#endif
+	// 前のウィンドウ サイズに固有のコンテキストをクリアします。
 	ID3D11RenderTargetView* nullViews[] = {nullptr};
 	m_d3dContext->OMSetRenderTargets(ARRAYSIZE(nullViews), nullViews, nullptr);
 	m_d3dRenderTargetView = nullptr;
@@ -248,8 +245,8 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 			// 何らかの理由でデバイスを削除した場合、新しいデバイスとスワップ チェーンを作成する必要があります。
 			HandleDeviceLost();
 
-			// すべての設定が完了しました。このメソッドの実行を続行しないでください。HandleDeviceLost はこのメソッドに再入し、
-			// 新しいデバイスを正しく設定します。
+			// すべての設定が完了しました。このメソッドの実行を続行しないでください。HandleDeviceLost はこのメソッドに再入します
+			// また、新しいデバイスを正しく設定します。
 			return;
 		}
 		else
@@ -260,7 +257,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 	else
 	{
 		// それ以外の場合は、既存の Direct3D デバイスと同じアダプターを使用して、新規作成します。
-		DXGI_SWAP_CHAIN_DESC1 swapChainDesc = { 0 };
+		DXGI_SWAP_CHAIN_DESC1 swapChainDesc = {0};
 
 		swapChainDesc.Width = lround(m_d3dRenderTargetSize.Width); // ウィンドウのサイズと一致させます。
 		swapChainDesc.Height = lround(m_d3dRenderTargetSize.Height);
@@ -271,7 +268,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 		swapChainDesc.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
 		swapChainDesc.BufferCount = 2; // 遅延を最小限に抑えるにはダブル バッファーを使用します。
 		swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL; // Windows ストア アプリはすべて、この SwapEffect を使用する必要があります。
-		swapChainDesc.Flags = 0;
+		swapChainDesc.Flags = 0;	
 		swapChainDesc.Scaling = DXGI_SCALING_NONE;
 		swapChainDesc.AlphaMode = DXGI_ALPHA_MODE_IGNORE;
 
@@ -293,12 +290,12 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 
 		DX::ThrowIfFailed(
 			dxgiFactory->CreateSwapChainForCoreWindow(
-			m_d3dDevice.Get(),
-			reinterpret_cast<IUnknown*>(m_window.Get()),
-			&swapChainDesc,
-			nullptr,
-			&m_swapChain
-			)
+				m_d3dDevice.Get(),
+				reinterpret_cast<IUnknown*>(m_window.Get()),
+				&swapChainDesc,
+				nullptr,
+				&m_swapChain
+				)
 			);
 
 		// DXGI が 1 度に複数のフレームをキュー処理していないことを確認します。これにより、遅延が減少し、

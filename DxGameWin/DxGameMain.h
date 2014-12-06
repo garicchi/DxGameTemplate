@@ -41,6 +41,6 @@ namespace DxGame
 		// ループ タイマーをレンダリングしています。
 		DX::StepTimer m_timer;
 
-		unique_ptr<ScreenManager> m_screenManager;
+		shared_ptr<ScreenManager> m_screenManager;
 	};
 }

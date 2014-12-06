@@ -16,15 +16,15 @@ using namespace Microsoft::WRL;
 
 class TextRenderer :public GameObject{
 public:
-	TextRenderer(const shared_ptr<DeviceResources>& deviceResources,String^ text,String^ font,XMFLOAT2 position,ColorF color,float fontSize);
+	TextRenderer(const shared_ptr<DeviceResources>& deviceResources, String^ text, String^ font, D2D1_POINT_2F position, ColorF color, float fontSize);
 
 	void CreateResources();
 	void ReleaseResources();
-	void Update(StepTimer const& timer, const GameInput& input);
+	void Update(const StepTimer& timer, const GameInput& input);
 	void Render();
 
 	String^ m_text;
-	XMFLOAT2 m_position;
+	D2D1_POINT_2F m_position;
 	ColorF m_color;
 	float m_fontSize;
 protected:

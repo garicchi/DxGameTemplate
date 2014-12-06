@@ -12,10 +12,12 @@ using namespace Windows::System::Threading;
 using namespace Concurrency;
 using namespace ToolkitHelper;
 
+
 // アプリケーションの読み込み時にアプリケーション資産を読み込んで初期化します。
 DxGameMain::DxGameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) :
 m_deviceResources(deviceResources)
 {
+	
 	// デバイスが失われたときや再作成されたときに通知を受けるように登録します
 	m_deviceResources->RegisterDeviceNotify(this);
 
@@ -31,7 +33,7 @@ m_deviceResources(deviceResources)
 	m_timer.SetFixedTimeStep(true);
 	m_timer.SetTargetElapsedSeconds(1.0 / 60);
 	*/
-	m_screenManager = unique_ptr<ScreenManager>(new ScreenManager(m_deviceResources, new TitleScreen(deviceResources)));
+	m_screenManager = shared_ptr<ScreenManager>(new ScreenManager(m_deviceResources, new TitleScreen(deviceResources)));
 	m_screenManager->CreateResources();
 }
 

@@ -21,7 +21,7 @@ void ScreenManager::ReleaseResources(){
 	delete m_currentScreen;
 }
 
-void ScreenManager::Update(StepTimer const& timer,const GameInput& input){
+void ScreenManager::Update(const StepTimer& timer,const GameInput& input){
 	auto nextScreen = m_currentScreen->Update(timer,input);
 	
 	if (nextScreen != m_currentScreen){

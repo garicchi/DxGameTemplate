@@ -22,7 +22,7 @@ void SimpleRenderer::ReleaseResources(){
 }
 
 //レンダラーの更新処理を行う
-void SimpleRenderer::Update(StepTimer const &timer, const GameInput& input){
+void SimpleRenderer::Update(const StepTimer& timer, const GameInput& input){
 
 }
 

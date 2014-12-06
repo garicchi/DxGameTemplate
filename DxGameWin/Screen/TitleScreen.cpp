@@ -21,7 +21,7 @@ void TitleScreen::ReleaseResources(){
 	ScreenBase::ReleaseResources();
 }
 
-ScreenBase* TitleScreen::Update(StepTimer const &timer, const GameInput& input){
+ScreenBase* TitleScreen::Update(const StepTimer& timer, const GameInput& input){
 	ScreenBase::Update(timer,input);
 	
 	for (unsigned int i = 0; i < input.m_pointInputs.size(); i++){

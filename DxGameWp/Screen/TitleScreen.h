@@ -17,7 +17,7 @@ public:
 
 	void CreateResources();
 	void ReleaseResources();
-	ScreenBase* Update(StepTimer const& timer, const GameInput& input);
+	ScreenBase* Update(const StepTimer& timer, const GameInput& input);
 	void Render();
 private:
 	shared_ptr<TextureRenderer> texture1;

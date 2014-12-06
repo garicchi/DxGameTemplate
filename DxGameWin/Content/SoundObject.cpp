@@ -33,7 +33,7 @@ void SoundObject::ReleaseResources(){
 }
 
 //レンダラーの更新処理を行う
-void SoundObject::Update(StepTimer const &timer, const GameInput& input){
+void SoundObject::Update(const StepTimer& timer, const GameInput& input){
 	m_audioEngine->Update();
 }
 

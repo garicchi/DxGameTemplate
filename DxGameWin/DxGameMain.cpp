@@ -31,7 +31,7 @@ m_deviceResources(deviceResources)
 	m_timer.SetFixedTimeStep(true);
 	m_timer.SetTargetElapsedSeconds(1.0 / 60);
 	*/
-	m_screenManager = unique_ptr<ScreenManager>(new ScreenManager(m_deviceResources, new TitleScreen(deviceResources)));
+	m_screenManager = shared_ptr<ScreenManager>(new ScreenManager(m_deviceResources, new TitleScreen(deviceResources)));
 	m_screenManager->CreateResources();
 }
 

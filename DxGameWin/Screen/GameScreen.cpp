@@ -22,7 +22,7 @@ void GameScreen::ReleaseResources(){
 	ScreenBase::ReleaseResources();
 }
 
-ScreenBase* GameScreen::Update(StepTimer const &timer, const GameInput& input){
+ScreenBase* GameScreen::Update(const StepTimer& timer, const GameInput& input){
 	ScreenBase::Update(timer,input);
 
 	ScreenBase* nextScreen = this;

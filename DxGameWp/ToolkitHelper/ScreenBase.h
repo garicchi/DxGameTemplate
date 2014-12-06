@@ -16,7 +16,7 @@ namespace ToolkitHelper{
 		ScreenBase(const shared_ptr<DeviceResources>& deviceResources);
 		virtual void CreateResources();
 		virtual void ReleaseResources();
-		virtual ScreenBase* Update(StepTimer const& timer,const GameInput& input);
+		virtual ScreenBase* Update(const StepTimer& timer,const GameInput& input);
 		virtual void Render();
 
 		virtual void AddObject(shared_ptr<GameObject> obj);
