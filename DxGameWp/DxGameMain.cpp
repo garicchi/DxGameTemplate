@@ -12,17 +12,15 @@ using namespace Windows::System::Threading;
 using namespace Concurrency;
 using namespace ToolkitHelper;
 
-
 // アプリケーションの読み込み時にアプリケーション資産を読み込んで初期化します。
 DxGameMain::DxGameMain(const std::shared_ptr<DX::DeviceResources>& deviceResources) :
 m_deviceResources(deviceResources)
 {
-	
 	// デバイスが失われたときや再作成されたときに通知を受けるように登録します
 	m_deviceResources->RegisterDeviceNotify(this);
 
 	//ゲーム画面を横に固定する場合
-	m_deviceResources->SetCurrentOrientation(Windows::Graphics::Display::DisplayOrientations::Landscape);
+	//m_deviceResources->SetCurrentOrientation(Windows::Graphics::Display::DisplayOrientations::Landscape);
 
 
 	// TODO: これをアプリのコンテンツの初期化で置き換えます。
