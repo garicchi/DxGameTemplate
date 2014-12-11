@@ -151,9 +151,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Assets\hoge.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
