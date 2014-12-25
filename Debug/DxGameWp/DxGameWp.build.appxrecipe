@@ -1,55 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>GARIBOOTCAMP</Machine>
-    <WindowsUser>garicchi</WindowsUser>
+    <Machine>WIN-Q0TNV80DJ9C</Machine>
+    <WindowsUser>Ryota</WindowsUser>
     <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|Win32</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>04c47709-0f11-407c-a7c1-c63aa69b1972</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\garicchi\Projects\DxGameTemplate\DxGameWp\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Ryota\Projects\DxGameTemplate\DxGameWp\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWp\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Ryota\Projects\DxGameTemplate\Debug\DxGameWp\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWp\DxGameWp.exe">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\Debug\DxGameWp\DxGameWp.exe">
       <PackagePath>DxGameWp.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWp\Assets\Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWp\Assets\Logo.scale-240.png">
       <PackagePath>Assets\Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWp\Assets\SmallLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWp\Assets\SmallLogo.scale-240.png">
       <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWp\Assets\SplashScreen.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWp\Assets\SplashScreen.scale-240.png">
       <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWp\Assets\Square71x71Logo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWp\Assets\Square71x71Logo.scale-240.png">
       <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWp\Assets\star.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWp\Assets\star.png">
       <PackagePath>Assets\star.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWp\Assets\StoreLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWp\Assets\StoreLogo.scale-240.png">
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWp\Assets\WideLogo.scale-240.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWp\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWp\Assets\hoge.wav">
-      <PackagePath>Assets\hoge.wav</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWp\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\Debug\DxGameWp\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

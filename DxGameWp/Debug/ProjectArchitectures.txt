@@ -1,1 +1,1 @@
-C:\Users\garicchi\Projects\DxGameTemplate\DxGameWp\DxGameWp.vcxproj;x86
+C:\Users\Ryota\Projects\DxGameTemplate\DxGameWp\DxGameWp.vcxproj;x86

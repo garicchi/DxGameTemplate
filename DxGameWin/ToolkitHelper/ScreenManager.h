@@ -22,6 +22,8 @@ namespace ToolkitHelper{
 	protected:
 		shared_ptr<DeviceResources> m_deviceResources;
 		ScreenBase* m_currentScreen;
+
+		bool m_isScreenTranslate;
 	};
 
 }

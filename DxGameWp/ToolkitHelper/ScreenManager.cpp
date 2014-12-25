@@ -8,7 +8,7 @@ using namespace DX;
 using namespace ToolkitHelper;
 
 ScreenManager::ScreenManager(const shared_ptr<DeviceResources>& deviceResources,ScreenBase* currentScreen)
-	:m_deviceResources(deviceResources),m_currentScreen(currentScreen){
+	:m_deviceResources(deviceResources),m_currentScreen(currentScreen),m_isScreenTranslate(false){
 	
 }
 
@@ -29,10 +29,15 @@ void ScreenManager::Update(const StepTimer& timer,const GameInput& input){
 		delete m_currentScreen;
 		m_currentScreen=nextScreen;
 		m_currentScreen->CreateResources();
-		
+		m_isScreenTranslate = true;
+	}
+	else{
+		m_isScreenTranslate = false;
 	}
 }
 
 void ScreenManager::Render(){
-	m_currentScreen->Render();
+	if (m_isScreenTranslate == false){
+		m_currentScreen->Render();
+	}
 }

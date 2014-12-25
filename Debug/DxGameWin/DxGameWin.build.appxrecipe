@@ -1,53 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>GARIBOOTCAMP</Machine>
-    <WindowsUser>garicchi</WindowsUser>
+    <Machine>WIN-Q0TNV80DJ9C</Machine>
+    <WindowsUser>Ryota</WindowsUser>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|Win32</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>1f92c8d9-0942-4f29-a16b-290bf7c81163</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Ryota\Projects\DxGameTemplate\DxGameWin\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Ryota\Projects\DxGameTemplate\Debug\DxGameWin\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\DxGameWin.exe">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\Debug\DxGameWin\DxGameWin.exe">
       <PackagePath>DxGameWin.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\DxGameWin.winmd">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\Debug\DxGameWin\DxGameWin.winmd">
       <PackagePath>DxGameWin.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\Logo.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWin\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\SmallLogo.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWin\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\star.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWin\Assets\star.png">
       <PackagePath>Assets\star.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\star2.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWin\Assets\star2.png">
       <PackagePath>Assets\star2.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWin\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\SplashScreen.png">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\DxGameWin\Assets\SplashScreen.png">
       <PackagePath>Assets\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\DxGameWin\Assets\hoge.wav">
-      <PackagePath>Assets\hoge.wav</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\garicchi\Projects\DxGameTemplate\Debug\DxGameWin\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Ryota\Projects\DxGameTemplate\Debug\DxGameWin\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

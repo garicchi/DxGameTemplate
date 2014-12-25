@@ -97,7 +97,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <PackageCertificateKeyFile>DxGameWin_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <NuGetPackageImportStamp>c6982453</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>055b5f43</NuGetPackageImportStamp>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <Link>
