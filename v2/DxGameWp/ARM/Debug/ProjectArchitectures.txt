@@ -1,0 +1,1 @@
+C:\Users\garicchi\Projects\DxGameTemplate\DxGameWp\DxGameWp.vcxproj;arm

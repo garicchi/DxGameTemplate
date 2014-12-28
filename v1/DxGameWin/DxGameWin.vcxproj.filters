@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>408b9c9f-2b99-4257-af48-c73cd9a32bb5</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>43188162-99f0-4cbd-972d-a2d1dc6322b8</UniqueIdentifier>
+      <Extensions>bmp;fbx;gif;jpg;jpeg;tga;tiff;tif;png</Extensions>
+    </Filter>
+    <Filter Include="Content">
+      <UniqueIdentifier>06bcc7cf-503a-4788-8cb6-5ccb89b19f79</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="Common\DirectXHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\StepTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\DeviceResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClCompile Include="Common\DeviceResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <Image Include="Assets\Logo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SmallLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\StoreLogo.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\SplashScreen.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Screen\GameScreen.cpp" />
+    <ClCompile Include="Screen\TitleScreen.cpp" />
+    <ClCompile Include="DxGameMain.cpp" />
+    <ClCompile Include="Content\SimpleRenderer.cpp" />
+    <ClCompile Include="Content\SoundObject.cpp" />
+    <ClCompile Include="ToolkitHelper\GameInput.cpp" />
+    <ClCompile Include="ToolkitHelper\ScreenBase.cpp" />
+    <ClCompile Include="ToolkitHelper\ScreenManager.cpp" />
+    <ClCompile Include="Content\SpriteFontRenderer.cpp" />
+    <ClCompile Include="Content\TextRenderer.cpp" />
+    <ClCompile Include="Screen\GameScreen3D.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="App.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Screen\GameScreen.h" />
+    <ClInclude Include="Screen\TitleScreen.h" />
+    <ClInclude Include="DxGameMain.h" />
+    <ClInclude Include="Content\SimpleRenderer.h" />
+    <ClInclude Include="Content\TextureRenderer.h" />
+    <ClInclude Include="Content\SoundObject.h" />
+    <ClInclude Include="ToolkitHelper\GameInput.h" />
+    <ClInclude Include="ToolkitHelper\GameObject.h" />
+    <ClInclude Include="ToolkitHelper\ScreenBase.h" />
+    <ClInclude Include="ToolkitHelper\ScreenManager.h" />
+    <ClInclude Include="Content\SpriteFontRenderer.h" />
+    <ClInclude Include="Content\TextRenderer.h" />
+    <ClInclude Include="Screen\GameScreen3D.h" />
+    <ClInclude Include="ToolkitHelper\Camera.h" />
+    <ClInclude Include="ToolkitHelper\Constants.h" />
+    <ClInclude Include="ToolkitHelper\Graphics.h" />
+    <ClInclude Include="ToolkitHelper\HitTestingHelpers.h" />
+    <ClInclude Include="ToolkitHelper\Mesh.h" />
+    <ClInclude Include="ToolkitHelper\ppltasks_extra.h" />
+    <ClInclude Include="ToolkitHelper\SkinMeshModel.h" />
+    <ClInclude Include="ToolkitHelper\SkinnedMeshRenderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DxGameWin_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\star.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="Assets\star2.png">
+      <Filter>Assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Assets\SkinningVertexShader.hlsl" />
+    <FxCompile Include="Assets\GlowEffect.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <MeshContentTask Include="Assets\teapot.fbx">
+      <Filter>Assets</Filter>
+    </MeshContentTask>
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderGraphContentTask Include="Assets\GlowEffect.dgsl" />
+  </ItemGroup>
+</Project>
