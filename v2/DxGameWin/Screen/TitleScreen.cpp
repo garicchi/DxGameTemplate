@@ -16,6 +16,9 @@ TitleScreen::TitleScreen(const shared_ptr<GameContext>& gameContext)
 void TitleScreen::CreateResources(){
 	ScreenBase::CreateResources();
 	//AddObject(texture1);
+
+	base = shared_ptr<AnimationBase>(new AnimationBase(m_gameContext));
+	AddObject(base);
 }
 
 void TitleScreen::WindowSizeChanged(){
@@ -32,11 +35,11 @@ ScreenBase* TitleScreen::Update(shared_ptr<FrameContext>& frameContext){
 	ScreenBase* nextScreen = this;
 	for (unsigned int i = 0; i < frameContext->m_input.m_pointInputs.size(); i++){
 		nextScreen = new GameScreen3D(m_gameContext);
+		
 		//texture1->m_rotation += 0.05;
 	}
 
 	
-
 	return nextScreen;
 }
 

@@ -77,6 +77,7 @@
     <ClInclude Include="ToolkitHelper\SkinnedMeshRenderer.h" />
     <ClInclude Include="ToolkitHelper\GameContext.h" />
     <ClInclude Include="ToolkitHelper\FrameContext.h" />
+    <ClInclude Include="ToolkitHelper\AnimationBase.h" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
