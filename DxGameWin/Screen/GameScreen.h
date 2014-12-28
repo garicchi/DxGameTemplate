@@ -5,6 +5,7 @@
 #include "ToolkitHelper/ScreenBase.h"
 #include "ToolkitHelper\GameInput.h"
 
+
 using namespace std;
 using namespace DX;
 using namespace ToolkitHelper;
@@ -17,6 +18,7 @@ public:
 	void ReleaseResources();
 	ScreenBase* Update(const StepTimer& timer, const GameInput& input);
 	void Render();
+
 
 
 };

@@ -4,7 +4,7 @@
 #include "Common/StepTimer.h"
 #include "ToolkitHelper\GameInput.h"
 #include "ToolkitHelper/ScreenBase.h"
-#include "Content/TextureRenderer.h"
+#include "Content/SimpleRenderer.h"
 #include "Content\SoundObject.h"
 
 using namespace std;
@@ -20,5 +20,5 @@ public:
 	ScreenBase* Update(const StepTimer& timer, const GameInput& input);
 	void Render();
 private:
-	shared_ptr<TextureRenderer> texture1;
+	shared_ptr<SimpleRenderer> texture1;
 };
