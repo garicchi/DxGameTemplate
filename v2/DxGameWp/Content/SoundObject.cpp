@@ -5,8 +5,8 @@ using namespace std;
 using namespace DX;
 
 //レンダラーの初期化処理を行う
-SoundObject::SoundObject(const shared_ptr<DeviceResources>& deviceResources,String^ path)
-	:GameObject(deviceResources),m_path(path){
+SoundObject::SoundObject(const shared_ptr<GameContext>& gameContext,String^ path)
+	:GameObject(gameContext),m_path(path){
 
 
 }
@@ -17,6 +17,10 @@ void SoundObject::CreateResources(){
 	m_audioEngine = shared_ptr<AudioEngine>(new AudioEngine(eflags));
 	m_soundEffect = shared_ptr<SoundEffect>(new SoundEffect(m_audioEngine.get(), m_path->Data()));
 	m_effectInstance = m_soundEffect->CreateInstance();
+
+}
+
+void SoundObject::WindowSizeChanged(){
 
 }
 
@@ -33,7 +37,7 @@ void SoundObject::ReleaseResources(){
 }
 
 //レンダラーの更新処理を行う
-void SoundObject::Update(const StepTimer& timer, const GameInput& input){
+void SoundObject::Update(shared_ptr<FrameContext>& frameContext){
 	m_audioEngine->Update();
 }
 

@@ -432,7 +432,7 @@ void DX::DeviceResources::CreateWindowSizeDependentResources()
 void DX::DeviceResources::SetWindow(CoreWindow^ window)
 {
 	DisplayInformation^ currentDisplayInformation = DisplayInformation::GetForCurrentView();
-	double width = window->Bounds.Width;
+
 	m_window = window;
 	m_logicalSize = Windows::Foundation::Size(window->Bounds.Width, window->Bounds.Height);
 	m_nativeOrientation = currentDisplayInformation->NativeOrientation;

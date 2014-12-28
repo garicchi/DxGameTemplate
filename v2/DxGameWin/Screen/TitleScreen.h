@@ -7,7 +7,8 @@
 #include "Content/SimpleRenderer.h"
 #include "Content\SoundObject.h"
 #include "ToolkitHelper\GameContext.h"
-#include "Animation\LinerAnimation.h"
+#include "Animation\PositionAnimation.h"
+#include "Content\TextureRenderer.h"
 
 using namespace std;
 using namespace DX;
@@ -23,7 +24,7 @@ public:
 	ScreenBase* Update(shared_ptr<FrameContext>& frameContext);
 	void Render();
 private:
-	shared_ptr<SimpleRenderer> texture1;
+	shared_ptr<TextureRenderer> texture1;
 
-	shared_ptr<LinerAnimation> base;
+	shared_ptr<PositionAnimation> animation1;
 };

@@ -20,7 +20,7 @@ m_deviceResources(deviceResources)
 	m_deviceResources->RegisterDeviceNotify(this);
 
 	//ゲーム画面を横に固定する場合
-	//m_deviceResources->SetCurrentOrientation(Windows::Graphics::Display::DisplayOrientations::Landscape);
+	m_deviceResources->SetCurrentOrientation(Windows::Graphics::Display::DisplayOrientations::Landscape);
 
 
 	// TODO: これをアプリのコンテンツの初期化で置き換えます。
@@ -31,28 +31,35 @@ m_deviceResources(deviceResources)
 	m_timer.SetFixedTimeStep(true);
 	m_timer.SetTargetElapsedSeconds(1.0 / 60);
 	*/
-	m_screenManager = shared_ptr<ScreenManager>(new ScreenManager(m_deviceResources, new TitleScreen(deviceResources)));
+	m_gameContext = shared_ptr<GameContext>(new GameContext(m_deviceResources));
+
+	m_screenManager = shared_ptr<ScreenManager>(new ScreenManager(m_gameContext, new TitleScreen(m_gameContext)));
 	m_screenManager->CreateResources();
+
+	m_frameContext = shared_ptr<FrameContext>(new FrameContext(m_timer,m_input));
 }
 
 DxGameMain::~DxGameMain()
 {
 	// デバイスの通知を登録解除しています
 	m_deviceResources->RegisterDeviceNotify(nullptr);
+	m_frameContext.reset();
+	m_screenManager.reset();
+	m_gameContext.reset();
 }
 
 // ウィンドウのサイズが変更される (デバイスの方向が変更されるなど) 場合に、 アプリケーションの状態を更新します。
 void DxGameMain::CreateWindowSizeDependentResources()
 {
 	// TODO: これをアプリのコンテンツのサイズに依存する初期化で置き換えます。
-	m_screenManager->CreateResources();
+	m_screenManager->WindowSizeChanged();
 }
 
 // アプリケーション状態をフレームごとに 1 回更新します。
 void DxGameMain::Update()
 {
 	// シーン オブジェクトを更新します。
-	m_timer.Tick([&]()
+	m_timer.Tick([&,this]()
 	{
 		// TODO: これをアプリのコンテンツの更新関数で置き換えます。
 #pragma region XINPUT
@@ -80,7 +87,7 @@ void DxGameMain::Update()
 #pragma endregion
 
 		//レンダラーの更新処理をする
-		m_screenManager->Update(m_timer, m_input);
+		m_screenManager->Update(m_frameContext);
 	});
 }
 

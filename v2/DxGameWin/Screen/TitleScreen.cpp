@@ -10,15 +10,15 @@ using namespace D2D1;
 TitleScreen::TitleScreen(const shared_ptr<GameContext>& gameContext)
 	:ScreenBase(gameContext){
 	
-	//texture1 =make_shared<SimpleRenderer>(SimpleRenderer(m_deviceResources));
+	texture1 = shared_ptr<TextureRenderer>(new TextureRenderer(m_gameContext,L"assets/star.png",Vector2F(10,10),Vector2F(100,100),0));
+	animation1 = shared_ptr<PositionAnimation>(new PositionAnimation(m_gameContext,Vector2F(10,10),Vector2F(500,10)));
 }
 
 void TitleScreen::CreateResources(){
 	ScreenBase::CreateResources();
-	//AddObject(texture1);
-
-	base = shared_ptr<LinerAnimation>(new LinerAnimation(m_gameContext,10,100));
-	AddObject(base);
+	
+	AddObject(texture1);
+	AddObject(animation1);
 }
 
 void TitleScreen::WindowSizeChanged(){
@@ -34,10 +34,13 @@ ScreenBase* TitleScreen::Update(shared_ptr<FrameContext>& frameContext){
 	
 	ScreenBase* nextScreen = this;
 	for (unsigned int i = 0; i < frameContext->m_input.m_pointInputs.size(); i++){
-		//nextScreen = new GameScreen3D(m_gameContext);
-		base->Begin(4);
-		//texture1->m_rotation += 0.05;
+		//nextScreen = new GameScreen(m_gameContext);
+		if (animation1->GetState() == AnimationObjectState::Stop){
+			animation1->Begin(2);
+		}
+		
 	}
+	texture1->m_position = animation1->GetValue();
 
 	
 	return nextScreen;
@@ -46,5 +49,4 @@ ScreenBase* TitleScreen::Update(shared_ptr<FrameContext>& frameContext){
 void TitleScreen::Render(){
 	ScreenBase::Render();
 	
-	OutputDebugString((base->Value().ToString()+"\n")->Data());
 }

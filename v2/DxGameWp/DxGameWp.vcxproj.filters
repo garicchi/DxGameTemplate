@@ -36,6 +36,20 @@
     <ClInclude Include="App.h" />
     <ClInclude Include="DxGameMain.h" />
     <ClInclude Include="ToolkitHelper\ScreenManager.h" />
+    <ClInclude Include="Animation\LinerAnimation.h" />
+    <ClInclude Include="Animation\PositionAnimation.h" />
+    <ClInclude Include="Screen\GameScreen3D.h" />
+    <ClInclude Include="ToolkitHelper\AnimationBase.h" />
+    <ClInclude Include="ToolkitHelper\Camera.h" />
+    <ClInclude Include="ToolkitHelper\Constants.h" />
+    <ClInclude Include="ToolkitHelper\FrameContext.h" />
+    <ClInclude Include="ToolkitHelper\GameContext.h" />
+    <ClInclude Include="ToolkitHelper\Graphics.h" />
+    <ClInclude Include="ToolkitHelper\HitTestingHelpers.h" />
+    <ClInclude Include="ToolkitHelper\Mesh.h" />
+    <ClInclude Include="ToolkitHelper\ppltasks_extra.h" />
+    <ClInclude Include="ToolkitHelper\SkinMeshModel.h" />
+    <ClInclude Include="ToolkitHelper\SkinnedMeshRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)pch.cpp" />
@@ -53,6 +67,7 @@
     <ClCompile Include="App.cpp" />
     <ClCompile Include="DxGameMain.cpp" />
     <ClCompile Include="ToolkitHelper\ScreenManager.cpp" />
+    <ClCompile Include="Screen\GameScreen3D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Common">
@@ -84,11 +99,26 @@
     <Image Include="Assets\star.png">
       <Filter>Assets</Filter>
     </Image>
+    <Image Include="Assets\star2.png">
+      <Filter>Assets</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderGraphContentTask Include="Assets\GlowEffect.dgsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Assets\GlowEffect.hlsl" />
+    <FxCompile Include="Assets\SkinningVertexShader.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <MeshContentTask Include="Assets\teapot.fbx">
+      <Filter>Assets</Filter>
+    </MeshContentTask>
   </ItemGroup>
 </Project>

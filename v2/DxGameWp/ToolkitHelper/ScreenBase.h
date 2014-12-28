@@ -5,6 +5,8 @@
 #include "GameObject.h"
 #include <vector>
 #include "pch.h"
+#include "ToolkitHelper\GameContext.h"
+#include "ToolkitHelper\FrameContext.h"
 
 using namespace std;
 using namespace DX;
@@ -13,17 +15,18 @@ namespace ToolkitHelper{
 
 	class ScreenBase{
 	public:
-		ScreenBase(const shared_ptr<DeviceResources>& deviceResources);
+		ScreenBase(const shared_ptr<GameContext>& gameContext);
 		virtual void CreateResources();
+		virtual void WindowSizeChanged();
 		virtual void ReleaseResources();
-		virtual ScreenBase* Update(const StepTimer& timer,const GameInput& input);
+		virtual ScreenBase* Update(shared_ptr<FrameContext>& frameContext);
 		virtual void Render();
 
 		virtual void AddObject(shared_ptr<GameObject> obj);
 		virtual bool RemoveObject(shared_ptr<GameObject> obj);
 
 	protected:
-		shared_ptr<DeviceResources> m_deviceResources;
+		shared_ptr<GameContext> m_gameContext;
 		vector<shared_ptr<GameObject>> m_renderObjects;
 	};
 
