@@ -5,6 +5,7 @@
 #include "ScreenBase.h"
 #include "ToolkitHelper\GameInput.h"
 #include "ToolkitHelper\GameContext.h"
+#include "ToolkitHelper\FrameContext.h"
 
 using namespace std;
 using namespace DX;
@@ -18,7 +19,7 @@ namespace ToolkitHelper{
 		void CreateResources();
 		void WindowSizeChanged();
 		void ReleaseResources();
-		void Update(const StepTimer& timer,const GameInput& input);
+		void Update(shared_ptr<FrameContext>& frameContext);
 		void Render();
 
 	protected:

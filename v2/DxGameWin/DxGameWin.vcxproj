@@ -202,6 +202,7 @@
     <ClInclude Include="Screen\GameScreen3D.h" />
     <ClInclude Include="ToolkitHelper\Camera.h" />
     <ClInclude Include="ToolkitHelper\Constants.h" />
+    <ClInclude Include="ToolkitHelper\FrameContext.h" />
     <ClInclude Include="ToolkitHelper\GameContext.h" />
     <ClInclude Include="ToolkitHelper\GameInput.h" />
     <ClInclude Include="ToolkitHelper\GameObject.h" />

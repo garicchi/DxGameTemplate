@@ -19,7 +19,7 @@ public:
 	void CreateResources();
 	void WindowSizeChanged();
 	void ReleaseResources();
-	ScreenBase* Update(const StepTimer& timer, const GameInput& input);
+	ScreenBase* Update(shared_ptr<FrameContext>& frameContext);
 	void Render();
 private:
 	shared_ptr<SimpleRenderer> texture1;

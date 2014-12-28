@@ -26,8 +26,8 @@ void GameScreen::ReleaseResources(){
 	ScreenBase::ReleaseResources();
 }
 
-ScreenBase* GameScreen::Update(const StepTimer& timer, const GameInput& input){
-	ScreenBase::Update(timer,input);
+ScreenBase* GameScreen::Update(shared_ptr<FrameContext>& frameContext){
+	ScreenBase::Update(frameContext);
 
 	ScreenBase* nextScreen = this;
 

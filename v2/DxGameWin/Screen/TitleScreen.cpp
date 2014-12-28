@@ -26,11 +26,11 @@ void TitleScreen::ReleaseResources(){
 	ScreenBase::ReleaseResources();
 }
 
-ScreenBase* TitleScreen::Update(const StepTimer& timer, const GameInput& input){
-	ScreenBase::Update(timer,input);
+ScreenBase* TitleScreen::Update(shared_ptr<FrameContext>& frameContext){
+	ScreenBase::Update(frameContext);
 	
 	ScreenBase* nextScreen = this;
-	for (unsigned int i = 0; i < input.m_pointInputs.size(); i++){
+	for (unsigned int i = 0; i < frameContext->m_input.m_pointInputs.size(); i++){
 		nextScreen = new GameScreen3D(m_gameContext);
 		//texture1->m_rotation += 0.05;
 	}

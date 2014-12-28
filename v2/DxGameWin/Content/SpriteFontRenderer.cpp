@@ -30,7 +30,7 @@ void SpriteFontRenderer::ReleaseResources(){
 }
 
 //レンダラーの更新処理を行う
-void SpriteFontRenderer::Update(const StepTimer& timer, const GameInput& input){
+void SpriteFontRenderer::Update(shared_ptr<FrameContext>& frameContext){
 
 }
 

@@ -102,12 +102,12 @@ void GameScreen3D::ReleaseResources(){
 	m_loadingComplete = false;
 }
 
-ScreenBase* GameScreen3D::Update(const StepTimer& timer, const GameInput& input){
-	ScreenBase::Update(timer, input);
+ScreenBase* GameScreen3D::Update(shared_ptr<FrameContext>& frameContext){
+	ScreenBase::Update(frameContext);
 
 	ScreenBase* nextScreen = this;
 
-	auto timeDelta = static_cast<float>(timer.GetElapsedSeconds());
+	auto timeDelta = static_cast<float>(frameContext->m_timer.GetElapsedSeconds());
 
 
 	// Update animated models.

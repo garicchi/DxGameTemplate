@@ -21,7 +21,7 @@ public:
 	void CreateResources();
 	void WindowSizeChanged();
 	void ReleaseResources();
-	void Update(const StepTimer& timer, const GameInput& input);
+	void Update(shared_ptr<FrameContext>& frameContext);
 	void Render();
 
 	String^ m_text;

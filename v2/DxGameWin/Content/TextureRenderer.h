@@ -41,7 +41,7 @@ public:
 		m_texture.Reset();
 	}
 
-	void Update(const StepTimer& timer, const GameInput& input){
+	void Update(shared_ptr<FrameContext>& frameContext){
 		
 	}
 

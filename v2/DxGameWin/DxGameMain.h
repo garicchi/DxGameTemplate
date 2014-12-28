@@ -4,6 +4,7 @@
 #include "Common\DeviceResources.h"
 #include "ToolkitHelper/ScreenManager.h"
 #include "ToolkitHelper\GameContext.h"
+#include "ToolkitHelper\FrameContext.h"
 
 using namespace std;
 using namespace DX;
@@ -36,7 +37,7 @@ namespace DxGame
 		// デバイス リソースへのキャッシュされたポインター。
 		std::shared_ptr<GameContext> m_gameContext;
 		std::shared_ptr<DeviceResources> m_deviceResources;
-
+		shared_ptr<FrameContext> m_frameContext;
 		// TODO: これを独自のコンテンツ レンダラーで置き換えます。
 		GameInput m_input;
 

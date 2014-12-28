@@ -32,9 +32,9 @@ void ScreenBase::ReleaseResources(){
 	m_renderObjects.clear();
 }
 
-ScreenBase* ScreenBase::Update(const StepTimer& timer,const GameInput& input){
+ScreenBase* ScreenBase::Update(shared_ptr<FrameContext>& frameContext){
 	for (unsigned int i = 0; i < m_renderObjects.size(); i++){
-		m_renderObjects.at(i)->Update(timer,input);
+		m_renderObjects.at(i)->Update(frameContext);
 	}
 
 	return this;

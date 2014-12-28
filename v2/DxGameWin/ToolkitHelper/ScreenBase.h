@@ -6,6 +6,7 @@
 #include <vector>
 #include "pch.h"
 #include "ToolkitHelper\GameContext.h"
+#include "ToolkitHelper\FrameContext.h"
 
 using namespace std;
 using namespace DX;
@@ -18,7 +19,7 @@ namespace ToolkitHelper{
 		virtual void CreateResources();
 		virtual void WindowSizeChanged();
 		virtual void ReleaseResources();
-		virtual ScreenBase* Update(const StepTimer& timer,const GameInput& input);
+		virtual ScreenBase* Update(shared_ptr<FrameContext>& frameContext);
 		virtual void Render();
 
 		virtual void AddObject(shared_ptr<GameObject> obj);

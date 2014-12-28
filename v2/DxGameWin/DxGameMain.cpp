@@ -35,12 +35,17 @@ m_deviceResources(deviceResources)
 
 	m_screenManager = shared_ptr<ScreenManager>(new ScreenManager(m_gameContext, new TitleScreen(m_gameContext)));
 	m_screenManager->CreateResources();
+
+	m_frameContext = shared_ptr<FrameContext>(new FrameContext(m_timer,m_input));
 }
 
 DxGameMain::~DxGameMain()
 {
 	// デバイスの通知を登録解除しています
 	m_deviceResources->RegisterDeviceNotify(nullptr);
+	m_frameContext.reset();
+	m_screenManager.reset();
+	m_gameContext.reset();
 }
 
 // ウィンドウのサイズが変更される (デバイスの方向が変更されるなど) 場合に、 アプリケーションの状態を更新します。
@@ -54,7 +59,7 @@ void DxGameMain::CreateWindowSizeDependentResources()
 void DxGameMain::Update()
 {
 	// シーン オブジェクトを更新します。
-	m_timer.Tick([&]()
+	m_timer.Tick([&,this]()
 	{
 		// TODO: これをアプリのコンテンツの更新関数で置き換えます。
 #pragma region XINPUT
@@ -82,7 +87,7 @@ void DxGameMain::Update()
 #pragma endregion
 
 		//レンダラーの更新処理をする
-		m_screenManager->Update(m_timer, m_input);
+		m_screenManager->Update(m_frameContext);
 	});
 }
 

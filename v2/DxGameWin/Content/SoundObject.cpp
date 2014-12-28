@@ -37,7 +37,7 @@ void SoundObject::ReleaseResources(){
 }
 
 //レンダラーの更新処理を行う
-void SoundObject::Update(const StepTimer& timer, const GameInput& input){
+void SoundObject::Update(shared_ptr<FrameContext>& frameContext){
 	m_audioEngine->Update();
 }
 

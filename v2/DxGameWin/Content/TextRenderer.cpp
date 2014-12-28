@@ -42,7 +42,7 @@ void TextRenderer::ReleaseResources(){
 }
 
 //レンダラーの更新処理を行う
-void TextRenderer::Update(const StepTimer& timer, const GameInput& input){
+void TextRenderer::Update(shared_ptr<FrameContext>& frameContext){
 	m_gameContext->m_deviceResources->GetDWriteFactory()->CreateTextLayout(
 		m_text->Data(),
 		(uint32) m_text->Length(),
