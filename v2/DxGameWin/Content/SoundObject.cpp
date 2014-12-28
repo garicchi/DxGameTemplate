@@ -20,6 +20,10 @@ void SoundObject::CreateResources(){
 
 }
 
+void SoundObject::WindowSizeChanged(){
+
+}
+
 //レンダラーで使ったリソースを解放する
 void SoundObject::ReleaseResources(){
 	if (m_effectInstance->GetState() == SoundState::PLAYING){

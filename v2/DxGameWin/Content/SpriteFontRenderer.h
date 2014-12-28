@@ -17,6 +17,7 @@ public:
 	SpriteFontRenderer(const shared_ptr<DeviceResources>& deviceResources, String^ fontPath, D2D1_VECTOR_2F position, String^ text);
 
 	void CreateResources();
+	void WindowSizeChanged();
 	void ReleaseResources();
 	void Update(const StepTimer& timer,const GameInput& input);
 	void Render();

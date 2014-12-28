@@ -11,6 +11,10 @@ SimpleRenderer::SimpleRenderer(const shared_ptr<DeviceResources>& deviceResource
 
 }
 
+void SimpleRenderer::WindowSizeChanged(){
+
+}
+
 //レンダラーで使うリソースを確保する
 void SimpleRenderer::CreateResources(){
 

@@ -19,6 +19,7 @@ public:
 	GameScreen3D(const shared_ptr<DeviceResources>& deviceResources);
 
 	void CreateResources();
+	void WindowSizeChanged();
 	void ReleaseResources();
 	ScreenBase* Update(const StepTimer& timer, const GameInput& input);
 	void Render();

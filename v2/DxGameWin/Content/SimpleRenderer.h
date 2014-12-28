@@ -15,6 +15,7 @@ public:
 	SimpleRenderer(const shared_ptr<DeviceResources>& deviceResources);
 
 	void CreateResources();
+	void WindowSizeChanged();
 	void ReleaseResources();
 	void Update(const StepTimer& timer, const GameInput& input);
 	void Render();

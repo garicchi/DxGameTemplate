@@ -14,6 +14,7 @@ namespace ToolkitHelper{
 			:m_deviceResources(deviceResources){
 		}
 		virtual void CreateResources() = 0;
+		virtual void WindowSizeChanged() = 0;
 		virtual void ReleaseResources() = 0;
 		virtual void Update(const StepTimer& timer,const GameInput& input) = 0;
 		virtual void Render() = 0;

@@ -45,7 +45,7 @@ DxGameMain::~DxGameMain()
 void DxGameMain::CreateWindowSizeDependentResources()
 {
 	// TODO: これをアプリのコンテンツのサイズに依存する初期化で置き換えます。
-	m_screenManager->CreateResources();
+	m_screenManager->WindowSizeChanged();
 }
 
 // アプリケーション状態をフレームごとに 1 回更新します。
