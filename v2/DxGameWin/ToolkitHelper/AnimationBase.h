@@ -10,7 +10,7 @@ namespace ToolkitHelper{
 
 	class AnimationBase :public GameObject{
 	public:
-		AnimationBase(shared_ptr<GameContext> gameContext)
+		AnimationBase(const shared_ptr<GameContext>& gameContext)
 		:GameObject(gameContext){
 			m_animationState = AnimationObjectState::Stop;
 			m_beginFlag = false;

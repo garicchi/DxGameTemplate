@@ -7,7 +7,7 @@
 #include "Content/SimpleRenderer.h"
 #include "Content\SoundObject.h"
 #include "ToolkitHelper\GameContext.h"
-#include "ToolkitHelper\AnimationBase.h"
+#include "Animation\LinerAnimation.h"
 
 using namespace std;
 using namespace DX;
@@ -25,5 +25,5 @@ public:
 private:
 	shared_ptr<SimpleRenderer> texture1;
 
-	shared_ptr<AnimationBase> base;
+	shared_ptr<LinerAnimation> base;
 };

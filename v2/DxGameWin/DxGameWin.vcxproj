@@ -192,6 +192,8 @@
     <Image Include="Assets\SplashScreen.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation\LinerAnimation.h" />
+    <ClInclude Include="Animation\PositionAnimation.h" />
     <ClInclude Include="App.h" />
     <ClInclude Include="Common\DeviceResources.h" />
     <ClInclude Include="Content\SoundObject.h" />

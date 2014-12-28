@@ -78,6 +78,8 @@
     <ClInclude Include="ToolkitHelper\GameContext.h" />
     <ClInclude Include="ToolkitHelper\FrameContext.h" />
     <ClInclude Include="ToolkitHelper\AnimationBase.h" />
+    <ClInclude Include="Animation\LinerAnimation.h" />
+    <ClInclude Include="Animation\PositionAnimation.h" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />

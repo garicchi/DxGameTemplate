@@ -17,7 +17,7 @@ void TitleScreen::CreateResources(){
 	ScreenBase::CreateResources();
 	//AddObject(texture1);
 
-	base = shared_ptr<AnimationBase>(new AnimationBase(m_gameContext));
+	base = shared_ptr<LinerAnimation>(new LinerAnimation(m_gameContext,10,100));
 	AddObject(base);
 }
 
@@ -34,8 +34,8 @@ ScreenBase* TitleScreen::Update(shared_ptr<FrameContext>& frameContext){
 	
 	ScreenBase* nextScreen = this;
 	for (unsigned int i = 0; i < frameContext->m_input.m_pointInputs.size(); i++){
-		nextScreen = new GameScreen3D(m_gameContext);
-		
+		//nextScreen = new GameScreen3D(m_gameContext);
+		base->Begin(4);
 		//texture1->m_rotation += 0.05;
 	}
 
@@ -45,4 +45,6 @@ ScreenBase* TitleScreen::Update(shared_ptr<FrameContext>& frameContext){
 
 void TitleScreen::Render(){
 	ScreenBase::Render();
+	
+	OutputDebugString((base->Value().ToString()+"\n")->Data());
 }
