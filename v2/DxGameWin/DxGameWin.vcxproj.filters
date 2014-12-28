@@ -75,6 +75,7 @@
     <ClInclude Include="ToolkitHelper\ppltasks_extra.h" />
     <ClInclude Include="ToolkitHelper\SkinMeshModel.h" />
     <ClInclude Include="ToolkitHelper\SkinnedMeshRenderer.h" />
+    <ClInclude Include="ToolkitHelper\GameContext.h" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />
