@@ -16,6 +16,11 @@ void ScreenManager::CreateResources(){
 	m_currentScreen->CreateResources();
 }
 
+void ScreenManager::WindowSizeChanged(){
+
+	m_currentScreen->WindowSizeChanged();
+}
+
 void ScreenManager::ReleaseResources(){
 	m_currentScreen->ReleaseResources();
 	delete m_currentScreen;

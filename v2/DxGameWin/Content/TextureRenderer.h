@@ -30,6 +30,10 @@ public:
 
 	}
 
+	void WindowSizeChanged(){
+
+	}
+
 	void ReleaseResources(){
 		m_sprite.reset();
 		

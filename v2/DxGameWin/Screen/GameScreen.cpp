@@ -18,6 +18,10 @@ void GameScreen::CreateResources(){
 	AddObject(shared_ptr<TextRenderer>(new TextRenderer(m_deviceResources,"Ç‡ÇÒÇ∂Ç·èƒÇ´","Segoe UI",Point2F(10,10),ColorF::White,34.0f)));
 }
 
+void GameScreen::WindowSizeChanged(){
+	ScreenBase::WindowSizeChanged();
+}
+
 void GameScreen::ReleaseResources(){
 	ScreenBase::ReleaseResources();
 }

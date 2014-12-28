@@ -18,6 +18,7 @@ public:
 	SoundObject(const shared_ptr<DeviceResources>& deviceResources,String^ path);
 
 	void CreateResources();
+	void WindowSizeChanged();
 	void ReleaseResources();
 	void Update(const StepTimer& timer, const GameInput& input);
 	void Render();

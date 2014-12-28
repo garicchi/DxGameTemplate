@@ -18,6 +18,10 @@ void TitleScreen::CreateResources(){
 	//AddObject(texture1);
 }
 
+void TitleScreen::WindowSizeChanged(){
+	ScreenBase::WindowSizeChanged();
+}
+
 void TitleScreen::ReleaseResources(){
 	ScreenBase::ReleaseResources();
 }

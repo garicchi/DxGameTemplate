@@ -18,6 +18,13 @@ void ScreenBase::CreateResources(){
 	}
 }
 
+void ScreenBase::WindowSizeChanged(){
+	for (unsigned int i = 0; i < m_renderObjects.size(); i++){
+		m_renderObjects.at(i)->WindowSizeChanged();
+	}
+}
+
+
 void ScreenBase::ReleaseResources(){
 	for (unsigned int i = 0; i < m_renderObjects.size(); i++){
 		m_renderObjects.at(i)->ReleaseResources();

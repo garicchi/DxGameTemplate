@@ -15,6 +15,7 @@ namespace ToolkitHelper{
 		ScreenManager(const shared_ptr<DeviceResources>& deviceResources, ScreenBase* currentScreen);
 
 		void CreateResources();
+		void WindowSizeChanged();
 		void ReleaseResources();
 		void Update(const StepTimer& timer,const GameInput& input);
 		void Render();

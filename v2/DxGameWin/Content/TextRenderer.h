@@ -19,6 +19,7 @@ public:
 	TextRenderer(const shared_ptr<DeviceResources>& deviceResources, String^ text, String^ font, D2D1_POINT_2F position, ColorF color, float fontSize);
 
 	void CreateResources();
+	void WindowSizeChanged();
 	void ReleaseResources();
 	void Update(const StepTimer& timer, const GameInput& input);
 	void Render();

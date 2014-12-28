@@ -42,6 +42,12 @@ void GameScreen3D::CreateResources(){
 		m_loadingComplete = true;
 	});
 
+	this->WindowSizeChanged();
+}
+
+void GameScreen3D::WindowSizeChanged(){	
+	ScreenBase::WindowSizeChanged();
+
 	/*---WindowSize Dependent---*/
 	m_miscConstants.ViewportHeight = m_deviceResources->GetScreenViewport().Height;
 	m_miscConstants.ViewportWidth = m_deviceResources->GetScreenViewport().Width;

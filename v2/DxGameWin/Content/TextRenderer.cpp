@@ -30,6 +30,10 @@ void TextRenderer::CreateResources(){
 
 }
 
+void TextRenderer::WindowSizeChanged(){
+
+}
+
 //レンダラーで使ったリソースを解放する
 void TextRenderer::ReleaseResources(){
 	m_textBrush.Reset();

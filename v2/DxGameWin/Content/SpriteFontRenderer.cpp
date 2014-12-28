@@ -19,6 +19,10 @@ void SpriteFontRenderer::CreateResources(){
 	m_spriteFont = shared_ptr<SpriteFont>(new SpriteFont(device,m_path->Data()));
 }
 
+void SpriteFontRenderer::WindowSizeChanged(){
+
+}
+
 //レンダラーで使ったリソースを解放する
 void SpriteFontRenderer::ReleaseResources(){
 	m_spriteBatch.reset();
