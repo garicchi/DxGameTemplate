@@ -6,18 +6,21 @@
 #include "ToolkitHelper\GameInput.h"
 
 using namespace DX;
-using namespace ToolkitHelper;
 
-class FrameContext{
-public:
-	FrameContext(
-		StepTimer& timer,
-		GameInput& input):
-	m_timer(timer),m_input(input){
+namespace ToolkitHelper{
 
-	}
+	class FrameContext{
+	public:
+		FrameContext(
+			StepTimer& timer,
+			GameInput& input) :
+			m_timer(timer), m_input(input){
 
-	StepTimer& m_timer;
-	GameInput& m_input;
-	
-};
+		}
+
+		StepTimer& m_timer;
+		GameInput& m_input;
+
+	};
+
+}
