@@ -12,6 +12,9 @@ v1/DxGameWin/Debug
 v1/DxGameWp/ARM/Debug
 v1/DxGameWp/Debug
 
+v1/packages
+v1/ipch
+
 v2/Debug
 
 v2/DxGame.sdf
@@ -27,3 +30,5 @@ v2/DxGameWp/ARM/Debug
 v2/DxGameWp/Debug
 v2/DxGame.opensdf
 
+v2/packages
+v2/ipch
