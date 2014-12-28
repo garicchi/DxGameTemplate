@@ -9,8 +9,8 @@ using namespace DX;
 using namespace D2D1;
 using namespace DirectX;
 
-GameScreen3D::GameScreen3D(const shared_ptr<DeviceResources>& deviceResources)
-	:ScreenBase(deviceResources){
+GameScreen3D::GameScreen3D(const shared_ptr<GameContext>& gameContext)
+	:ScreenBase(gameContext){
 
 	m_loadingComplete = false;
 }
@@ -18,7 +18,7 @@ GameScreen3D::GameScreen3D(const shared_ptr<DeviceResources>& deviceResources)
 void GameScreen3D::CreateResources(){
 	ScreenBase::CreateResources();
 
-	m_graphics.Initialize(m_deviceResources->GetD3DDevice(), m_deviceResources->GetD3DDeviceContext(), m_deviceResources->GetDeviceFeatureLevel());
+	m_graphics.Initialize(m_gameContext->m_deviceResources->GetD3DDevice(), m_gameContext->m_deviceResources->GetD3DDeviceContext(), m_gameContext->m_deviceResources->GetDeviceFeatureLevel());
 
 	// Set DirectX to not cull any triangles so the entire mesh will always be shown.
 	CD3D11_RASTERIZER_DESC d3dRas(D3D11_DEFAULT);
@@ -27,14 +27,14 @@ void GameScreen3D::CreateResources(){
 	d3dRas.AntialiasedLineEnable = true;
 
 	ComPtr<ID3D11RasterizerState> p3d3RasState;
-	m_deviceResources->GetD3DDevice()->CreateRasterizerState(&d3dRas, &p3d3RasState);
-	m_deviceResources->GetD3DDeviceContext()->RSSetState(p3d3RasState.Get());
+	m_gameContext->m_deviceResources->GetD3DDevice()->CreateRasterizerState(&d3dRas, &p3d3RasState);
+	m_gameContext->m_deviceResources->GetD3DDeviceContext()->RSSetState(p3d3RasState.Get());
 
 	m_model = shared_ptr<SkinMeshModel>(new SkinMeshModel(make_shared<Graphics>(m_graphics), L"teapot.cmo", L"", L""));
 	auto loadMeshTask = m_model->LoadMeshAsync();
 
 	m_skinnedMeshRenderer = shared_ptr<SkinnedMeshRenderer>(new SkinnedMeshRenderer());
-	auto initializeSkinnedMeshRendererTask = m_skinnedMeshRenderer->InitializeAsync(m_deviceResources->GetD3DDevice(), m_deviceResources->GetD3DDeviceContext(),L"SkinningVertexShader.cso");
+	auto initializeSkinnedMeshRendererTask = m_skinnedMeshRenderer->InitializeAsync(m_gameContext->m_deviceResources->GetD3DDevice(), m_gameContext->m_deviceResources->GetD3DDeviceContext(), L"SkinningVertexShader.cso");
 
 	(loadMeshTask && initializeSkinnedMeshRendererTask).then([this]()
 	{
@@ -49,13 +49,13 @@ void GameScreen3D::WindowSizeChanged(){
 	ScreenBase::WindowSizeChanged();
 
 	/*---WindowSize Dependent---*/
-	m_miscConstants.ViewportHeight = m_deviceResources->GetScreenViewport().Height;
-	m_miscConstants.ViewportWidth = m_deviceResources->GetScreenViewport().Width;
+	m_miscConstants.ViewportHeight = m_gameContext->m_deviceResources->GetScreenViewport().Height;
+	m_miscConstants.ViewportWidth = m_gameContext->m_deviceResources->GetScreenViewport().Width;
 	m_graphics.UpdateMiscConstants(m_miscConstants);
 
-	m_graphics.GetCamera().SetOrientationMatrix(m_deviceResources->GetOrientationTransform3D());
+	m_graphics.GetCamera().SetOrientationMatrix(m_gameContext->m_deviceResources->GetOrientationTransform3D());
 
-	Windows::Foundation::Size outputSize = m_deviceResources->GetOutputSize();
+	Windows::Foundation::Size outputSize = m_gameContext->m_deviceResources->GetOutputSize();
 
 	// Setup the camera parameters for our scene.
 	m_graphics.GetCamera().SetViewport((UINT) outputSize.Width, (UINT) outputSize.Height);
@@ -133,11 +133,11 @@ void GameScreen3D::Render(){
 		return;
 	}
 
-	auto context = m_deviceResources->GetD3DDeviceContext();
+	auto context = m_gameContext->m_deviceResources->GetD3DDeviceContext();
 
 	// Set render targets to the screen.
-	auto rtv = m_deviceResources->GetBackBufferRenderTargetView();
-	auto dsv = m_deviceResources->GetDepthStencilView();
+	auto rtv = m_gameContext->m_deviceResources->GetBackBufferRenderTargetView();
+	auto dsv = m_gameContext->m_deviceResources->GetDepthStencilView();
 	ID3D11RenderTargetView *const targets[1] = { rtv };
 	context->OMSetRenderTargets(1, targets, dsv);
 

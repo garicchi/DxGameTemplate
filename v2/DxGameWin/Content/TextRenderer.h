@@ -4,7 +4,7 @@
 #include "Common/StepTimer.h"
 #include "ToolkitHelper\GameInput.h"
 #include "ToolkitHelper/GameObject.h"
-
+#include "ToolkitHelper\GameContext.h"
 
 using namespace std;
 using namespace DX;
@@ -16,7 +16,7 @@ using namespace Microsoft::WRL;
 
 class TextRenderer :public GameObject{
 public:
-	TextRenderer(const shared_ptr<DeviceResources>& deviceResources, String^ text, String^ font, D2D1_POINT_2F position, ColorF color, float fontSize);
+	TextRenderer(const shared_ptr<GameContext>& gameContext, String^ text, String^ font, D2D1_POINT_2F position, ColorF color, float fontSize);
 
 	void CreateResources();
 	void WindowSizeChanged();

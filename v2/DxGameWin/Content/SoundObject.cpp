@@ -5,8 +5,8 @@ using namespace std;
 using namespace DX;
 
 //ƒŒƒ“ƒ_ƒ‰[‚Ì‰Šú‰»ˆ—‚ğs‚¤
-SoundObject::SoundObject(const shared_ptr<DeviceResources>& deviceResources,String^ path)
-	:GameObject(deviceResources),m_path(path){
+SoundObject::SoundObject(const shared_ptr<GameContext>& gameContext,String^ path)
+	:GameObject(gameContext),m_path(path){
 
 
 }

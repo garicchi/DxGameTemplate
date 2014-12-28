@@ -12,7 +12,7 @@ using namespace ToolkitHelper;
 
 class SimpleRenderer:public GameObject{
 public:
-	SimpleRenderer(const shared_ptr<DeviceResources>& deviceResources);
+	SimpleRenderer(const shared_ptr<GameContext>& gameContext);
 
 	void CreateResources();
 	void WindowSizeChanged();

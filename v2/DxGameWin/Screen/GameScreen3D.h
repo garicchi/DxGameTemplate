@@ -9,6 +9,7 @@
 #include "ToolkitHelper\Constants.h"
 #include "ToolkitHelper\SkinnedMeshRenderer.h"
 #include "ToolkitHelper\SkinMeshModel.h"
+#include "ToolkitHelper\GameContext.h"
 
 using namespace std;
 using namespace DX;
@@ -16,7 +17,7 @@ using namespace ToolkitHelper;
 
 class GameScreen3D :public ScreenBase{
 public:
-	GameScreen3D(const shared_ptr<DeviceResources>& deviceResources);
+	GameScreen3D(const shared_ptr<GameContext>& gameContext);
 
 	void CreateResources();
 	void WindowSizeChanged();

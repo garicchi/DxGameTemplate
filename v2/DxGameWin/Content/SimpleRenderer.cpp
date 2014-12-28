@@ -5,8 +5,8 @@ using namespace std;
 using namespace DX;
 
 //ƒŒƒ“ƒ_ƒ‰[‚Ì‰Šú‰»ˆ—‚ğs‚¤
-SimpleRenderer::SimpleRenderer(const shared_ptr<DeviceResources>& deviceResources)
-	:GameObject(deviceResources){
+SimpleRenderer::SimpleRenderer(const shared_ptr<GameContext>& gameContext)
+	:GameObject(gameContext){
 
 
 }

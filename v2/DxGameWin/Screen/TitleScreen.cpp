@@ -7,8 +7,8 @@ using namespace std;
 using namespace DX;
 using namespace D2D1;
 
-TitleScreen::TitleScreen(const shared_ptr<DeviceResources>& deviceResources)
-	:ScreenBase(deviceResources){
+TitleScreen::TitleScreen(const shared_ptr<GameContext>& gameContext)
+	:ScreenBase(gameContext){
 	
 	//texture1 =make_shared<SimpleRenderer>(SimpleRenderer(m_deviceResources));
 }
@@ -31,7 +31,7 @@ ScreenBase* TitleScreen::Update(const StepTimer& timer, const GameInput& input){
 	
 	ScreenBase* nextScreen = this;
 	for (unsigned int i = 0; i < input.m_pointInputs.size(); i++){
-		nextScreen = new GameScreen3D(m_deviceResources);
+		nextScreen = new GameScreen3D(m_gameContext);
 		//texture1->m_rotation += 0.05;
 	}
 

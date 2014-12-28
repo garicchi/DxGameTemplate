@@ -7,8 +7,8 @@ using namespace std;
 using namespace DX;
 using namespace ToolkitHelper;
 
-ScreenBase::ScreenBase(const shared_ptr<DeviceResources>& deviceResources)
-	:m_deviceResources(deviceResources){
+ScreenBase::ScreenBase(const shared_ptr<GameContext>& gameContext)
+	:m_gameContext(gameContext){
 	
 }
 

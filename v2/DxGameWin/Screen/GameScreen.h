@@ -12,7 +12,7 @@ using namespace ToolkitHelper;
 
 class GameScreen :public ScreenBase{
 public:
-	GameScreen(const shared_ptr<DeviceResources>& deviceResources);
+	GameScreen(const shared_ptr<GameContext>& gameContext);
 
 	void CreateResources();
 	void WindowSizeChanged();

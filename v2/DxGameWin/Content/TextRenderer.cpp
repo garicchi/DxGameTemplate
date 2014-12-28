@@ -5,8 +5,8 @@ using namespace std;
 using namespace DX;
 
 //レンダラーの初期化処理を行う
-TextRenderer::TextRenderer(const shared_ptr<DeviceResources>& deviceResources, String^ text, String^ font, D2D1_POINT_2F position, ColorF color, float fontSize)
-	:GameObject(deviceResources),m_text(text),m_font(font),m_position(position),m_color(color),m_fontSize(fontSize){
+TextRenderer::TextRenderer(const shared_ptr<GameContext>& gameContext, String^ text, String^ font, D2D1_POINT_2F position, ColorF color, float fontSize)
+	:GameObject(gameContext),m_text(text),m_font(font),m_position(position),m_color(color),m_fontSize(fontSize){
 
 	
 }
@@ -14,10 +14,10 @@ TextRenderer::TextRenderer(const shared_ptr<DeviceResources>& deviceResources, S
 //レンダラーで使うリソースを確保する
 void TextRenderer::CreateResources(){
 	//テキスト使用するブラシを確保します
-	m_deviceResources->GetD2DDeviceContext()->CreateSolidColorBrush(m_color, &m_textBrush);
+	m_gameContext->m_deviceResources->GetD2DDeviceContext()->CreateSolidColorBrush(m_color, &m_textBrush);
 
 	//テキストに使用するフォーマットを確保します
-	m_deviceResources->GetDWriteFactory()->CreateTextFormat(
+	m_gameContext->m_deviceResources->GetDWriteFactory()->CreateTextFormat(
 		m_font->Data(),
 		nullptr,
 		DWRITE_FONT_WEIGHT_LIGHT,
@@ -43,7 +43,7 @@ void TextRenderer::ReleaseResources(){
 
 //レンダラーの更新処理を行う
 void TextRenderer::Update(const StepTimer& timer, const GameInput& input){
-	m_deviceResources->GetDWriteFactory()->CreateTextLayout(
+	m_gameContext->m_deviceResources->GetDWriteFactory()->CreateTextLayout(
 		m_text->Data(),
 		(uint32) m_text->Length(),
 		m_textFormat.Get(),
@@ -56,7 +56,7 @@ void TextRenderer::Update(const StepTimer& timer, const GameInput& input){
 //レンダラーの描画処理を行う
 void TextRenderer::Render(){
 	//デバイスコンテキストの確保
-	ID2D1DeviceContext* context = m_deviceResources->GetD2DDeviceContext();
+	ID2D1DeviceContext* context = m_gameContext->m_deviceResources->GetD2DDeviceContext();
 
 	context->BeginDraw(); //描画開始
 

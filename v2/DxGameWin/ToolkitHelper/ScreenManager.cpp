@@ -7,8 +7,8 @@ using namespace std;
 using namespace DX;
 using namespace ToolkitHelper;
 
-ScreenManager::ScreenManager(const shared_ptr<DeviceResources>& deviceResources,ScreenBase* currentScreen)
-	:m_deviceResources(deviceResources),m_currentScreen(currentScreen),m_isScreenTranslate(false){
+ScreenManager::ScreenManager(const shared_ptr<GameContext>& gameContext,ScreenBase* currentScreen)
+	:m_gameContext(gameContext),m_currentScreen(currentScreen),m_isScreenTranslate(false){
 	
 }
 

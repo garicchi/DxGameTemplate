@@ -3,6 +3,7 @@
 #include "Common\StepTimer.h"
 #include "Common\DeviceResources.h"
 #include "ToolkitHelper/ScreenManager.h"
+#include "ToolkitHelper\GameContext.h"
 
 using namespace std;
 using namespace DX;
@@ -33,7 +34,8 @@ namespace DxGame
 #endif
 	private:
 		// デバイス リソースへのキャッシュされたポインター。
-		std::shared_ptr<DX::DeviceResources> m_deviceResources;
+		std::shared_ptr<GameContext> m_gameContext;
+		std::shared_ptr<DeviceResources> m_deviceResources;
 
 		// TODO: これを独自のコンテンツ レンダラーで置き換えます。
 		GameInput m_input;

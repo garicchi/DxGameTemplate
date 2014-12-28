@@ -6,6 +6,7 @@
 #include "ToolkitHelper/ScreenBase.h"
 #include "Content/SimpleRenderer.h"
 #include "Content\SoundObject.h"
+#include "ToolkitHelper\GameContext.h"
 
 using namespace std;
 using namespace DX;
@@ -13,7 +14,7 @@ using namespace ToolkitHelper;
 
 class TitleScreen:public ScreenBase{
 public:
-	TitleScreen(const shared_ptr<DeviceResources>& deviceResources);
+	TitleScreen(const shared_ptr<GameContext>& gameContext);
 
 	void CreateResources();
 	void WindowSizeChanged();
