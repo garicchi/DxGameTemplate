@@ -1,1 +1,0 @@
-C:\Users\Ryota\Projects\DxGameTemplate\DxGameWin\DxGameWin.vcxproj;x86
