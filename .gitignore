@@ -1,5 +1,25 @@
 v1/Debug
-v2/Debug
 
 v1/DxGame.sdf
+
+v1/ARM/Debug
+v1/AppPackages/DxGameWp
+
+v1/DxGameWin/ARM/Debug
+v1/DxGameWin/Debug
+
+v1/DxGameWp/ARM/Debug
+v1/DxGameWp/Debug
+
+v2/Debug
+
 v2/DxGame.sdf
+
+v2/ARM/Debug
+v2/AppPackages/DxGameWp
+
+v2/DxGameWin/ARM/Debug
+v2/DxGameWin/Debug
+
+v2/DxGameWp/ARM/Debug
+v2/DxGameWp/Debug
