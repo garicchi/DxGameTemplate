@@ -1,7 +1,7 @@
 <VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
   <TemplateData>
     <Name>DXToolkit_Standard_WindowsStore</Name>
-    <Description>DirectXToolkitを使ったWindowsストアアプリ向け基本ゲームテンプレート</Description>
+    <Description>&lt;説明はありません。&gt;</Description>
     <ProjectType>VC</ProjectType>
     <ProjectSubType>
     </ProjectSubType>
@@ -20,16 +20,21 @@
       <ProjectItem ReplaceParameters="false" TargetFileName="DeviceResources.h">COMMON\DeviceResources.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="DirectXHelper.h">COMMON\DirectXHelper.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="StepTimer.h">COMMON\StepTimer.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="teapot.fbx">ASSETS\teapot.fbx</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="Logo.png">ASSETS\Logo.png</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="SmallLogo.png">ASSETS\SmallLogo.png</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="star.png">ASSETS\star.png</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="star2.png">ASSETS\star2.png</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="StoreLogo.png">ASSETS\StoreLogo.png</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="SplashScreen.png">ASSETS\SplashScreen.png</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="GlowEffect.dgsl">ASSETS\GlowEffect.dgsl</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="GlowEffect.hlsl">ASSETS\GlowEffect.hlsl</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="SkinningVertexShader.hlsl">ASSETS\SkinningVertexShader.hlsl</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="App.cpp">App.cpp</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="SoundObject.cpp">CONTENT\SoundObject.cpp</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="TextRenderer.cpp">CONTENT\TextRenderer.cpp</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="DxGameMain.cpp">DxGameMain.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="GameScreen3D.cpp">SCREEN\GameScreen3D.cpp</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="GameInput.cpp">TOOLKITHELPER\GameInput.cpp</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="ScreenBase.cpp">TOOLKITHELPER\ScreenBase.cpp</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="ScreenManager.cpp">TOOLKITHELPER\ScreenManager.cpp</ProjectItem>
@@ -38,12 +43,24 @@
       <ProjectItem ReplaceParameters="false" TargetFileName="SimpleRenderer.cpp">CONTENT\SimpleRenderer.cpp</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="GameScreen.cpp">SCREEN\GameScreen.cpp</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="TitleScreen.cpp">SCREEN\TitleScreen.cpp</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="LinerAnimation.h">ANIMATION\LinerAnimation.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="PositionAnimation.h">ANIMATION\PositionAnimation.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="App.h">App.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="SoundObject.h">CONTENT\SoundObject.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="TextRenderer.h">CONTENT\TextRenderer.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="DxGameMain.h">DxGameMain.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="GameScreen3D.h">SCREEN\GameScreen3D.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="AnimationBase.h">TOOLKITHELPER\AnimationBase.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Camera.h">TOOLKITHELPER\Camera.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Constants.h">TOOLKITHELPER\Constants.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="FrameContext.h">TOOLKITHELPER\FrameContext.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="GameContext.h">TOOLKITHELPER\GameContext.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="GameInput.h">TOOLKITHELPER\GameInput.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="GameObject.h">TOOLKITHELPER\GameObject.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Graphics.h">TOOLKITHELPER\Graphics.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="HitTestingHelpers.h">TOOLKITHELPER\HitTestingHelpers.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Mesh.h">TOOLKITHELPER\Mesh.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="ppltasks_extra.h">TOOLKITHELPER\ppltasks_extra.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="ScreenBase.h">TOOLKITHELPER\ScreenBase.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="ScreenManager.h">TOOLKITHELPER\ScreenManager.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="pch.h">pch.h</ProjectItem>
@@ -52,6 +69,8 @@
       <ProjectItem ReplaceParameters="false" TargetFileName="TextureRenderer.h">CONTENT\TextureRenderer.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="GameScreen.h">SCREEN\GameScreen.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="TitleScreen.h">SCREEN\TitleScreen.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="SkinMeshModel.h">TOOLKITHELPER\SkinMeshModel.h</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="SkinnedMeshRenderer.h">TOOLKITHELPER\SkinnedMeshRenderer.h</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="Package.appxmanifest">Package.appxmanifest</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="DxGameWin_TemporaryKey.pfx">DxGameWin_TemporaryKey.pfx</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="packages.config">packages.config</ProjectItem>

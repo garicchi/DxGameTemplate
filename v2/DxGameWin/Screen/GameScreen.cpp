@@ -2,7 +2,7 @@
 #include "GameScreen.h"
 
 #include "Content/TextureRenderer.h"
-#include "Content\TextRenderer.h"
+
 
 using namespace std;
 using namespace DX;
@@ -10,12 +10,14 @@ using namespace D2D1;
 
 GameScreen::GameScreen(const shared_ptr<GameContext>& gameContext)
 	:ScreenBase(gameContext){
+	text1 = shared_ptr<TextRenderer>(new TextRenderer(m_gameContext, "‚à‚ñ‚¶‚áÄ‚«", "Segoe UI", Point2F(10, 10), ColorF::White, 34.0f));
+	AddObject(text1);
 }
 
 void GameScreen::CreateResources(){
 	ScreenBase::CreateResources();
 
-	AddObject(shared_ptr<TextRenderer>(new TextRenderer(m_gameContext, "‚à‚ñ‚¶‚áÄ‚«", "Segoe UI", Point2F(10, 10), ColorF::White, 34.0f)));
+	
 }
 
 void GameScreen::WindowSizeChanged(){

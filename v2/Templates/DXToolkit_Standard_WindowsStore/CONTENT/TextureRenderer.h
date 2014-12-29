@@ -5,6 +5,7 @@
 #include "pch.h"
 #include "WICTextureLoader.h"
 #include "SpriteBatch.h"
+#include "ToolkitHelper\GameContext.h"
 
 using namespace std;
 using namespace DX;
@@ -15,18 +16,22 @@ using namespace ToolkitHelper;
 
 class TextureRenderer :public GameObject{
 public:
-	TextureRenderer(const shared_ptr<DeviceResources> &deviceResources,String^ path,D2D1_VECTOR_2F position,D2D1_VECTOR_2F size,float rotation) :
-		GameObject(deviceResources),m_path(path),m_position(position),m_size(size),m_rotation(rotation){
+	TextureRenderer(const shared_ptr<GameContext> &gameContext,String^ path,D2D1_VECTOR_2F position,D2D1_VECTOR_2F size,float rotation) :
+		GameObject(gameContext),m_path(path),m_position(position),m_size(size),m_rotation(rotation){
 		
 	}
 
 	void CreateResources(){
-		auto device = m_deviceResources->GetD3DDevice();
-		auto context = m_deviceResources->GetD3DDeviceContext();
+		auto device = m_gameContext->m_deviceResources->GetD3DDevice();
+		auto context = m_gameContext->m_deviceResources->GetD3DDeviceContext();
 
 		m_sprite.reset(new SpriteBatch(context));
 		
 		CreateWICTextureFromFile(device, m_path->Data(), nullptr, m_texture.ReleaseAndGetAddressOf());
+
+	}
+
+	void WindowSizeChanged(){
 
 	}
 
@@ -36,7 +41,7 @@ public:
 		m_texture.Reset();
 	}
 
-	void Update(const StepTimer& timer, const GameInput& input){
+	void Update(shared_ptr<FrameContext>& frameContext){
 		
 	}
 

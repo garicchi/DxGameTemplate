@@ -5,6 +5,7 @@
 #include "ToolkitHelper/ScreenBase.h"
 #include "ToolkitHelper\GameInput.h"
 #include "ToolkitHelper\FrameContext.h"
+#include "Content\TextRenderer.h"
 
 using namespace std;
 using namespace DX;
@@ -20,6 +21,6 @@ public:
 	ScreenBase* Update(shared_ptr<FrameContext>& frameContext);
 	void Render();
 
-
-
+private:
+	shared_ptr<TextRenderer> text1;
 };

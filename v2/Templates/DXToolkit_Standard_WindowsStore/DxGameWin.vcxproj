@@ -97,7 +97,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <PackageCertificateKeyFile>DxGameWin_TemporaryKey.pfx</PackageCertificateKeyFile>
-    <NuGetPackageImportStamp>c6982453</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>055b5f43</NuGetPackageImportStamp>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
     <Link>
@@ -192,6 +192,8 @@
     <Image Include="Assets\SplashScreen.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation\LinerAnimation.h" />
+    <ClInclude Include="Animation\PositionAnimation.h" />
     <ClInclude Include="App.h" />
     <ClInclude Include="Common\DeviceResources.h" />
     <ClInclude Include="Content\SoundObject.h" />
@@ -199,8 +201,18 @@
     <ClInclude Include="DxGameMain.h" />
     <ClInclude Include="Common\DirectXHelper.h" />
     <ClInclude Include="Common\StepTimer.h" />
+    <ClInclude Include="Screen\GameScreen3D.h" />
+    <ClInclude Include="ToolkitHelper\AnimationBase.h" />
+    <ClInclude Include="ToolkitHelper\Camera.h" />
+    <ClInclude Include="ToolkitHelper\Constants.h" />
+    <ClInclude Include="ToolkitHelper\FrameContext.h" />
+    <ClInclude Include="ToolkitHelper\GameContext.h" />
     <ClInclude Include="ToolkitHelper\GameInput.h" />
     <ClInclude Include="ToolkitHelper\GameObject.h" />
+    <ClInclude Include="ToolkitHelper\Graphics.h" />
+    <ClInclude Include="ToolkitHelper\HitTestingHelpers.h" />
+    <ClInclude Include="ToolkitHelper\Mesh.h" />
+    <ClInclude Include="ToolkitHelper\ppltasks_extra.h" />
     <ClInclude Include="ToolkitHelper\ScreenBase.h" />
     <ClInclude Include="ToolkitHelper\ScreenManager.h" />
     <ClInclude Include="pch.h" />
@@ -209,6 +221,8 @@
     <ClInclude Include="Content\TextureRenderer.h" />
     <ClInclude Include="Screen\GameScreen.h" />
     <ClInclude Include="Screen\TitleScreen.h" />
+    <ClInclude Include="ToolkitHelper\SkinMeshModel.h" />
+    <ClInclude Include="ToolkitHelper\SkinnedMeshRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
@@ -216,6 +230,7 @@
     <ClCompile Include="Content\SoundObject.cpp" />
     <ClCompile Include="Content\TextRenderer.cpp" />
     <ClCompile Include="DxGameMain.cpp" />
+    <ClCompile Include="Screen\GameScreen3D.cpp" />
     <ClCompile Include="ToolkitHelper\GameInput.cpp" />
     <ClCompile Include="ToolkitHelper\ScreenBase.cpp" />
     <ClCompile Include="ToolkitHelper\ScreenManager.cpp" />
@@ -238,6 +253,22 @@
     </AppxManifest>
     <None Include="DxGameWin_TemporaryKey.pfx" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Assets\GlowEffect.hlsl">
+      <DisableOptimizations Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableOptimizations>
+      <EnableDebuggingInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</EnableDebuggingInformation>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Assets\SkinningVertexShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MeshContentTask Include="Assets\teapot.fbx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderGraphContentTask Include="Assets\GlowEffect.dgsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

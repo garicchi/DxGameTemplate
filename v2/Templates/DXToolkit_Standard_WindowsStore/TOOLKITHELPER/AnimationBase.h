@@ -1,9 +1,3 @@
-/*
-* 参考 XNAゲームプログラミング Xbox 360とWindowsのクロスプラットフォーム開発 (GAME DEVELOPERシリーズ) 
-* 著 赤坂 玲音 
-* http://www.amazon.co.jp/dp/4797349697
-*/
-
 #pragma once
 #include "pch.h"
 #include "ToolkitHelper\GameObject.h"

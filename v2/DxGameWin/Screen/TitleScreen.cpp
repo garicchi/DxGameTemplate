@@ -12,13 +12,14 @@ TitleScreen::TitleScreen(const shared_ptr<GameContext>& gameContext)
 	
 	texture1 = shared_ptr<TextureRenderer>(new TextureRenderer(m_gameContext,L"assets/star.png",Vector2F(10,10),Vector2F(100,100),0));
 	animation1 = shared_ptr<PositionAnimation>(new PositionAnimation(m_gameContext,Vector2F(10,10),Vector2F(500,10)));
+	AddObject(texture1);
+	AddObject(animation1);
 }
 
 void TitleScreen::CreateResources(){
 	ScreenBase::CreateResources();
 	
-	AddObject(texture1);
-	AddObject(animation1);
+	
 }
 
 void TitleScreen::WindowSizeChanged(){
@@ -40,6 +41,7 @@ ScreenBase* TitleScreen::Update(shared_ptr<FrameContext>& frameContext){
 		}
 		
 	}
+
 	texture1->m_position = animation1->GetValue();
 
 	

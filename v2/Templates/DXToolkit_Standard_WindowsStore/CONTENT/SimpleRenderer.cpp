@@ -5,9 +5,13 @@ using namespace std;
 using namespace DX;
 
 //レンダラーの初期化処理を行う
-SimpleRenderer::SimpleRenderer(const shared_ptr<DeviceResources>& deviceResources)
-	:GameObject(deviceResources){
+SimpleRenderer::SimpleRenderer(const shared_ptr<GameContext>& gameContext)
+	:GameObject(gameContext){
 
+
+}
+
+void SimpleRenderer::WindowSizeChanged(){
 
 }
 
@@ -22,7 +26,7 @@ void SimpleRenderer::ReleaseResources(){
 }
 
 //レンダラーの更新処理を行う
-void SimpleRenderer::Update(const StepTimer& timer, const GameInput& input){
+void SimpleRenderer::Update(shared_ptr<FrameContext>& frameContext){
 
 }
 
