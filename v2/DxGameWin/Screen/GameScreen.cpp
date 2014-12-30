@@ -10,7 +10,7 @@ using namespace D2D1;
 
 GameScreen::GameScreen(const shared_ptr<GameContext>& gameContext)
 	:ScreenBase(gameContext){
-	text1 = shared_ptr<TextRenderer>(new TextRenderer(m_gameContext, "‚à‚ñ‚¶‚áÄ‚«", "Segoe UI", Point2F(10, 10), ColorF::White, 34.0f));
+	text1 = shared_ptr<TextRenderer>(new TextRenderer(m_gameContext, "‚à‚ñ‚¶‚áÄ‚«", "Segoe UI", XMFLOAT2(10, 10), ColorF::White, 34.0f));
 	AddObject(text1);
 }
 

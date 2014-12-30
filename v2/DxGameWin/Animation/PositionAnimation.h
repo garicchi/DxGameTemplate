@@ -6,7 +6,7 @@ using namespace ToolkitHelper;
 
 class PositionAnimation :public AnimationBase{
 public:
-	PositionAnimation(const shared_ptr<GameContext>& gameContext, D2D1_VECTOR_2F from, D2D1_VECTOR_2F to)
+	PositionAnimation(const shared_ptr<GameContext>& gameContext, XMFLOAT2 from, XMFLOAT2 to)
 		:AnimationBase(gameContext), m_from(from), m_to(to), m_value(from){
 
 	}
@@ -23,29 +23,29 @@ public:
 	void Update(shared_ptr<FrameContext>& frameContext){
 		AnimationBase::Update(frameContext);
 
-		m_value.x = m_from.x + (m_to.x - m_from.x)*m_progress;
-		m_value.y = m_from.y + (m_to.y - m_from.y)*m_progress;
+		m_value.x = static_cast<float>(m_from.x + (m_to.x - m_from.x)*m_progress);
+		m_value.y = static_cast<float>(m_from.y + (m_to.y - m_from.y)*m_progress);
 	}
 	void Render(){
 		AnimationBase::Render();
 	}
 
 
-	D2D1_VECTOR_2F GetFrom(){
+	XMFLOAT2 GetFrom(){
 		return m_from;
 	}
 
-	D2D1_VECTOR_2F GetTo(){
+	XMFLOAT2 GetTo(){
 		return m_to;
 	}
 
-	D2D1_VECTOR_2F GetValue(){
+	XMFLOAT2 GetValue(){
 		return m_value;
 	}
 
 protected:
 
-	D2D1_VECTOR_2F m_from;
-	D2D1_VECTOR_2F m_to;
-	D2D1_VECTOR_2F m_value;
+	XMFLOAT2 m_from;
+	XMFLOAT2 m_to;
+	XMFLOAT2 m_value;
 };

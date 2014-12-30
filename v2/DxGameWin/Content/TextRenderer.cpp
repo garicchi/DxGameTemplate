@@ -5,7 +5,7 @@ using namespace std;
 using namespace DX;
 
 //レンダラーの初期化処理を行う
-TextRenderer::TextRenderer(const shared_ptr<GameContext>& gameContext, String^ text, String^ font, D2D1_POINT_2F position, ColorF color, float fontSize)
+TextRenderer::TextRenderer(const shared_ptr<GameContext>& gameContext, String^ text, String^ font, XMFLOAT2 position, ColorF color, float fontSize)
 	:GameObject(gameContext),m_text(text),m_font(font),m_position(position),m_color(color),m_fontSize(fontSize){
 
 	
@@ -60,7 +60,8 @@ void TextRenderer::Render(){
 
 	context->BeginDraw(); //描画開始
 
-	context->DrawTextLayout(m_position,
+	D2D1_POINT_2F point = Point2F(m_position.x,m_position.y);
+	context->DrawTextLayout(point,
 		m_textLayout.Get(), m_textBrush.Get());
 
 	context->EndDraw();	//描画終了

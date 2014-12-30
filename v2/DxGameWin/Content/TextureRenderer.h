@@ -16,7 +16,7 @@ using namespace ToolkitHelper;
 
 class TextureRenderer :public GameObject{
 public:
-	TextureRenderer(const shared_ptr<GameContext> &gameContext,String^ path,D2D1_VECTOR_2F position,D2D1_VECTOR_2F size,float rotation) :
+	TextureRenderer(const shared_ptr<GameContext> &gameContext,String^ path,XMFLOAT2 position,XMFLOAT2 size,float rotation) :
 		GameObject(gameContext),m_path(path),m_position(position),m_size(size),m_rotation(rotation){
 		
 	}
@@ -58,8 +58,8 @@ public:
 		m_sprite->End();
 	}
 
-	D2D1_VECTOR_2F m_position;
-	D2D1_VECTOR_2F m_size;
+	XMFLOAT2 m_position;
+	XMFLOAT2 m_size;
 	float m_rotation;
 protected:
 	shared_ptr<SpriteBatch> m_sprite;
