@@ -32,11 +32,11 @@ m_deviceResources(deviceResources)
 	m_timer.SetTargetElapsedSeconds(1.0 / 60);
 	*/
 	m_gameContext = shared_ptr<GameContext>(new GameContext(m_deviceResources));
+	m_frameContext = shared_ptr<FrameContext>(new FrameContext(m_timer, m_input));
 
 	m_screenManager = shared_ptr<ScreenManager>(new ScreenManager(m_gameContext, new TitleScreen(m_gameContext)));
 	m_screenManager->CreateResources();
 
-	m_frameContext = shared_ptr<FrameContext>(new FrameContext(m_timer,m_input));
 }
 
 DxGameMain::~DxGameMain()
