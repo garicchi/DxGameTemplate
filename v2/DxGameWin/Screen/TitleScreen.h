@@ -9,12 +9,15 @@
 #include "ToolkitHelper\GameContext.h"
 #include "Animation\PositionAnimation.h"
 #include "Content\TextureRenderer.h"
+#include "ToolkitHelper\SaveDataStore.h"
+#include "Common\SaveData.h"
 
 using namespace std;
 using namespace DX;
 using namespace ToolkitHelper;
 
 class TitleScreen:public ScreenBase{
+
 public:
 	TitleScreen(const shared_ptr<GameContext>& gameContext);
 
@@ -27,4 +30,5 @@ private:
 	shared_ptr<TextureRenderer> texture1;
 
 	shared_ptr<PositionAnimation> animation1;
+
 };

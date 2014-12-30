@@ -12,16 +12,17 @@ using namespace Windows::Storage::Streams;
 
 namespace ToolkitHelper{
 
+	
 	template<typename T>
 	class SaveDataStore{
 	public:
-		static shared_ptr<SaveDataStore> getInstance(Type^ type){
-			m_type = type;
+
+		static shared_ptr<SaveDataStore<T>> getInstance(){
 			if (m_instance != nullptr){
 				return m_instance;
 			}
 			else{
-				m_instance = shared_ptr<SaveDataStore>(new SaveDataStore());
+				m_instance = shared_ptr<SaveDataStore<T>>(new SaveDataStore<T>());
 				return m_instance;
 			}
 		}
@@ -89,10 +90,11 @@ namespace ToolkitHelper{
 
 				return create_task(file->OpenAsync(FileAccessMode::ReadWrite))
 					.then([this](IRandomAccessStream^ stream){
-					Serializer^ serializer = ref new Serializer(m_type);
+					Serializer^ serializer = ref new Serializer(((Object^)m_dataModel)->GetType());
 					serializer->Write(stream->GetOutputStreamAt(0), this->GetData());
 					stream->FlushAsync();
-					stream->Dispose();
+					//stream->Dispose();
+					
 				});
 			});
 		}
@@ -101,20 +103,19 @@ namespace ToolkitHelper{
 	private:
 		SaveDataStore(){
 			m_dataModel = ref new T();
-			m_folder = KnownFolders::DocumentsLibrary;
+			m_folder = KnownFolders::CameraRoll;
 			m_fileName = L"SaveDataStoreData";
 		}
-
-
 
 		T^ m_dataModel;
 
 		StorageFile^ m_file;
 		StorageFolder^ m_folder;
 		String^ m_fileName;
-		Type^ m_type;
+		
+		static shared_ptr<SaveDataStore<T>> m_instance;
 
-		static shared_ptr<SaveDataStore> m_instance;
+		
 	};
 
 }

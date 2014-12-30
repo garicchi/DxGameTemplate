@@ -275,6 +275,11 @@
   <ItemGroup>
     <ProjectReference Include="..\SerializeWrapper\SerializeWrapper.csproj">
       <Project>{02f856db-c2ed-4c72-92ee-9491641041ab}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

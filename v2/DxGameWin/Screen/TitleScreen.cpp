@@ -2,12 +2,13 @@
 #include "TitleScreen.h"
 #include "GameScreen.h"
 #include "Screen\GameScreen3D.h"
-#include "ToolkitHelper\SaveDataStore.h"
-#include "Common\SaveData.h"
+
 
 using namespace std;
 using namespace DX;
 using namespace D2D1;
+
+shared_ptr<SaveDataStore<SaveData>> SaveDataStore<SaveData>::m_instance;
 
 TitleScreen::TitleScreen(const shared_ptr<GameContext>& gameContext)
 	:ScreenBase(gameContext){
@@ -17,6 +18,8 @@ TitleScreen::TitleScreen(const shared_ptr<GameContext>& gameContext)
 
 	AddObject(texture1);
 	AddObject(animation1);
+
+	
 }
 
 void TitleScreen::CreateResources(){
@@ -42,10 +45,12 @@ ScreenBase* TitleScreen::Update(shared_ptr<FrameContext>& frameContext){
 		if (animation1->GetState() == AnimationObjectState::Stop){
 			animation1->Begin(2);
 		}
-		//shared_ptr<SaveDataStore<SaveData>> store=SaveDataStore<SaveData>::getInstance(SaveData::GetType());
-		store->GetData()->Num = 6;
 		
-		store->SaveDataAsync();
+		shared_ptr<SaveDataStore<SaveData>> save=SaveDataStore<SaveData>::getInstance();
+		save->GetData()->Num = 6;
+		
+		save->SaveDataAsync();
+		
 	}
 
 	texture1->m_position = animation1->GetValue();
