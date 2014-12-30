@@ -23,8 +23,8 @@ public:
 	void Update(shared_ptr<FrameContext>& frameContext){
 		AnimationBase::Update(frameContext);
 
-		m_value.x = m_from.x + (m_to.x - m_from.x)*m_progress;
-		m_value.y = m_from.y + (m_to.y - m_from.y)*m_progress;
+		m_value.x = static_cast<float>(m_from.x + (m_to.x - m_from.x)*m_progress);
+		m_value.y = static_cast<float>(m_from.y + (m_to.y - m_from.y)*m_progress);
 	}
 	void Render(){
 		AnimationBase::Render();

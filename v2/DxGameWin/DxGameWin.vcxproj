@@ -213,6 +213,7 @@
     <ClInclude Include="ToolkitHelper\HitTestingHelpers.h" />
     <ClInclude Include="ToolkitHelper\Mesh.h" />
     <ClInclude Include="ToolkitHelper\ppltasks_extra.h" />
+    <ClInclude Include="ToolkitHelper\SaveDataStore.h" />
     <ClInclude Include="ToolkitHelper\ScreenBase.h" />
     <ClInclude Include="ToolkitHelper\ScreenManager.h" />
     <ClInclude Include="pch.h" />
