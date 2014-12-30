@@ -90,7 +90,8 @@ namespace ToolkitHelper{
 
 				return create_task(file->OpenAsync(FileAccessMode::ReadWrite))
 					.then([this](IRandomAccessStream^ stream){
-					Serializer^ serializer = ref new Serializer(((Object^)m_dataModel)->GetType());
+					Type^ type = ((Object^) m_dataModel)->GetType();
+					Serializer^ serializer = ref new Serializer(type);
 					serializer->Write(stream->GetOutputStreamAt(0), this->GetData());
 					stream->FlushAsync();
 					//stream->Dispose();

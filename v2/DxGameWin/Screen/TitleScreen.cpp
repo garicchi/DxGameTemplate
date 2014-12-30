@@ -49,7 +49,7 @@ ScreenBase* TitleScreen::Update(shared_ptr<FrameContext>& frameContext){
 		shared_ptr<SaveDataStore<SaveData>> save=SaveDataStore<SaveData>::getInstance();
 		save->GetData()->Num = 6;
 		
-		save->SaveDataAsync();
+		create_task(save->SaveDataAsync());
 		
 	}
 

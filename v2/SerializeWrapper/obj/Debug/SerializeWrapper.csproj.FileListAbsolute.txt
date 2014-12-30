@@ -17,3 +17,5 @@ C:\Users\garicchi\Projects\DxGameTemplate\v2\SerializeWrapper\obj\Debug\qualifie
 C:\Users\garicchi\Projects\DxGameTemplate\v2\SerializeWrapper\obj\Debug\qualifiers.txt.intermediate
 C:\Users\garicchi\Projects\DxGameTemplate\v2\SerializeWrapper\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\garicchi\Projects\DxGameTemplate\v2\SerializeWrapper\obj\Debug\SerializeWrapper.csprojResolveAssemblyReference.cache
+C:\Users\Ryota\Projects\DxGameTemplate\v2\SerializeWrapper\obj\Debug\SerializeWrapper.csprojResolveAssemblyReference.cache
+C:\Users\Ryota\Projects\DxGameTemplate\v2\SerializeWrapper\obj\Debug\SerializeWrapper.winmdobj
