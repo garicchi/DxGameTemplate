@@ -2,6 +2,8 @@
 #include "TitleScreen.h"
 #include "GameScreen.h"
 #include "Screen\GameScreen3D.h"
+#include "ToolkitHelper\SaveDataStore.h"
+#include "Common\SaveData.h"
 
 using namespace std;
 using namespace DX;
@@ -40,7 +42,10 @@ ScreenBase* TitleScreen::Update(shared_ptr<FrameContext>& frameContext){
 		if (animation1->GetState() == AnimationObjectState::Stop){
 			animation1->Begin(2);
 		}
+		//shared_ptr<SaveDataStore<SaveData>> store=SaveDataStore<SaveData>::getInstance(SaveData::GetType());
+		store->GetData()->Num = 6;
 		
+		store->SaveDataAsync();
 	}
 
 	texture1->m_position = animation1->GetValue();

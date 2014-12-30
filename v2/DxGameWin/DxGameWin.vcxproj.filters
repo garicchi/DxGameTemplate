@@ -81,6 +81,7 @@
     <ClInclude Include="Animation\LinerAnimation.h" />
     <ClInclude Include="Animation\PositionAnimation.h" />
     <ClInclude Include="ToolkitHelper\SaveDataStore.h" />
+    <ClInclude Include="Common\SaveData.h" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest" />

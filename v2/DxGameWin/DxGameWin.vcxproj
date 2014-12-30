@@ -196,6 +196,7 @@
     <ClInclude Include="Animation\PositionAnimation.h" />
     <ClInclude Include="App.h" />
     <ClInclude Include="Common\DeviceResources.h" />
+    <ClInclude Include="Common\SaveData.h" />
     <ClInclude Include="Content\SoundObject.h" />
     <ClInclude Include="Content\TextRenderer.h" />
     <ClInclude Include="DxGameMain.h" />
@@ -270,6 +271,11 @@
   </ItemGroup>
   <ItemGroup>
     <ShaderGraphContentTask Include="Assets\GlowEffect.dgsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SerializeWrapper\SerializeWrapper.csproj">
+      <Project>{02f856db-c2ed-4c72-92ee-9491641041ab}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
